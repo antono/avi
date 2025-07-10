@@ -20,7 +20,7 @@
       persist_mode = true;
       insert_mappings = true;
       close_on_exit = true;
-      shell = "bash";
+      shell = "~/.nix-profile/bin/bash";
       direction = "horizontal"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       float_opts = {
         border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
