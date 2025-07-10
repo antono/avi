@@ -99,7 +99,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<C-Tab>";
+      key = "<S-l>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -108,7 +108,7 @@
 
     {
       mode = "n";
-      key = "<C-S-Tab>";
+      key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
@@ -135,10 +135,19 @@
 
     {
       mode = "n";
-      key = "<leader>bp";
+      key = "<leader>bP";
       action = "<cmd>BufferLineTogglePin<cr>";
       options = {
         desc = "Toggle pin";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bp";
+      action = "<cmd>BufferLinePick<cr>";
+      options = {
+        desc = "Pick";
       };
     }
 

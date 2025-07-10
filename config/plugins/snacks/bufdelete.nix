@@ -16,6 +16,12 @@
     }
     {
       mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>lua Snacks.bufdelete.delete()<cr>";
+      options.desc = "Close buffer";
+    }
+    {
+      mode = "n";
       key = "<leader>bc";
       action = ''<cmd>lua Snacks.bufdelete.other()<cr>'';
       options.desc = "Close all buffers but current";

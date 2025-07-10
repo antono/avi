@@ -27,6 +27,7 @@
 
     markdown-preview = {
       enable = true;
+      autoLoad = true;
     };
 
     conform-nvim.settings = {

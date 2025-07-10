@@ -12,7 +12,7 @@
           end
         end
       '';
-      open_mapping = "[[<C-/>]]";
+      open_mapping = "[[<leader>fT]]";
       hide_numbers = true;
       shade_terminals = true;
       start_in_insert = true;
@@ -20,7 +20,7 @@
       persist_mode = true;
       insert_mappings = true;
       close_on_exit = true;
-      shell = "zsh";
+      shell = "bash";
       direction = "horizontal"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       float_opts = {
         border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
