@@ -110,7 +110,7 @@
           action = "buffers";
           options.desc = "View buffers";
         };
-        "<leader>fs" = {
+        "<leader>fS" = {
           action = "lsp_document_symbols";
           options.desc = "Search symbols";
         };

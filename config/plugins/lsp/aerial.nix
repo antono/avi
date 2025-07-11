@@ -49,7 +49,7 @@
     }
     {
       mode = "n";
-      key = "<leader>fR";
+      key = "<leader>fs";
       action = "<cmd>Telescope aerial<cr>";
       options = {
         desc = "Symbol List";
