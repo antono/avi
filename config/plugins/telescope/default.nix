@@ -11,6 +11,7 @@
       highlightTheme = "Catppuccin Macchiato";
       extensions = {
         fzf-native.enable = true;
+        zoxide.enable = true;
         ui-select = {
           enable = true;
           settings = {
@@ -69,6 +70,10 @@
         ];
       };
       keymaps = {
+        "<leader>fZ" = {
+          action = "zoxide";
+          options.desc = "Zoxide folder list";
+        };
         "<leader>ft" = {
           action = "todo-comments";
           options.desc = "View Todo";

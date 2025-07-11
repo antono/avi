@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
 {
   plugins.conform-nvim = {
     enable = true;
@@ -26,7 +31,7 @@
     };
   };
 
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.conform-nvim.enable [
     {
       mode = [
         "n"

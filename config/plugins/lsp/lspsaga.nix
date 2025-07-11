@@ -1,3 +1,4 @@
+{ lib, config, ... }:
 {
   plugins = {
     lspsaga = {
@@ -66,7 +67,7 @@
     ];
   };
 
-  keymaps = [
+  keymaps = lib.mkIf config.plugins.lspsaga.enable [
     {
       mode = "n";
       key = "K";
@@ -86,10 +87,10 @@
     }
     {
       mode = "n";
-      key = "<leader>lo";
+      key = "<leader>lO";
       action = "<cmd>Lspsaga outline<CR>";
       options = {
-        desc = "Outline";
+        desc = "LSPSaga Outline";
         silent = true;
       };
     }

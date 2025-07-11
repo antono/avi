@@ -32,6 +32,7 @@
     ./lsp/lsp.nix
     ./lsp/lspsaga.nix
     ./lsp/trouble.nix
+    ./lsp/aerial.nix
 
     ./lang/cpp.nix
     ./lang/css.nix
