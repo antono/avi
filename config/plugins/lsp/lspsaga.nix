@@ -96,7 +96,7 @@
     }
     {
       mode = "n";
-      key = "<leader>lr";
+      key = "<leader>lR";
       action = "<cmd>Lspsaga rename<CR>";
       options = {
         desc = "Rename";
