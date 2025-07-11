@@ -49,7 +49,7 @@
     }
     {
       mode = "n";
-      key = "<leader>us";
+      key = "<leader>cs";
       action = "<cmd>Trouble symbols toggle focus=false<cr>";
       options = {
         desc = "Symbols toggle";

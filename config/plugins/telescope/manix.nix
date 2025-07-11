@@ -3,9 +3,6 @@
   lib,
   ...
 }:
-let
-  inherit (lib) mkIf;
-in
 {
   plugins.telescope = {
     extensions = {
@@ -13,8 +10,8 @@ in
     };
   };
 
-  keymaps = mkIf config.plugins.telescope.enable [
-    (mkIf config.plugins.telescope.extensions.manix.enable {
+  keymaps = lib.mkIf config.plugins.telescope.enable [
+    (lib.mkIf config.plugins.telescope.extensions.manix.enable {
       mode = "n";
       key = "<leader>fM";
       action = "<cmd>Telescope manix<CR>";
