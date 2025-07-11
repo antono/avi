@@ -106,6 +106,14 @@
           action = "git_commits";
           options.desc = "commits";
         };
+        "<leader>fb" = {
+          action = "buffers";
+          options.desc = "View buffers";
+        };
+        "<leader>fs" = {
+          action = "lsp_document_symbols";
+          options.desc = "Search symbols";
+        };
         "<leader>fa" = {
           action = "autocommands";
           options.desc = "Auto Commands";

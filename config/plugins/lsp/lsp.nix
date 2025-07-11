@@ -36,7 +36,6 @@
         cssls.enable = true;
         tailwindcss.enable = true;
         svelte.enable = true;
-        vuels.enable = true;
         pyright.enable = true;
         nil_ls.enable = true; # Nix
         dockerls.enable = true; # Docker
