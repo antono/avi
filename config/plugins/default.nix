@@ -62,6 +62,7 @@
     ./ui/precognition.nix
     ./ui/toggleterm.nix
     ./ui/ufo.nix
+    ./ui/diagnostics.nix
 
     ./util/colorizer.nix
     ./util/compiler.nix

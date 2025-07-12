@@ -17,13 +17,13 @@
       shade_terminals = true;
       start_in_insert = true;
       terminal_mappings = true;
-      persist_mode = true;
+      persist_mode = false;
       insert_mappings = true;
       close_on_exit = true;
       shell = "~/.nix-profile/bin/bash";
       direction = "horizontal"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       float_opts = {
-        border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+        border = "double"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
         width = 80;
         height = 20;
         winblend = 0;
