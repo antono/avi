@@ -49,12 +49,6 @@
         }
 
         {
-          __unkeyed-1 = "<leader>s";
-          mode = "n";
-          group = "Search";
-        }
-
-        {
           __unkeyed-1 = "<leader>u";
           mode = "n";
           group = "UI/UX";

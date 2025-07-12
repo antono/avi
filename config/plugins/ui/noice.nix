@@ -40,7 +40,7 @@
   keymaps = lib.mkIf (config.plugins.telescope.enable && config.plugins.noice.enable) [
     {
       mode = "n";
-      key = "<leader>sn";
+      key = "<leader>fn";
       action = "<cmd>Telescope noice<CR>";
       options = {
         desc = "Find notifications";
