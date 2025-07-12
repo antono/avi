@@ -5,6 +5,7 @@
   ...
 }:
 {
+
   extraPackages = lib.mkIf config.plugins.blink-cmp.enable (
     with pkgs;
     [
@@ -157,6 +158,7 @@
                   name = "Dict";
                   module = "blink-cmp-dictionary";
                   min_keyword_length = 3;
+                  enabled = false;
                 };
                 emoji = {
                   name = "Emoji";
@@ -166,7 +168,7 @@
                 git = {
                   name = "Git";
                   module = "blink-cmp-git";
-                  enabled = true;
+                  enabled = false;
                   score_offset = 100;
                   should_show_items.__raw = ''
                     function()
