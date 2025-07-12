@@ -11,7 +11,7 @@
 
   plugins = {
     avante = {
-      enable = true;
+      enable = false;
       settings = {
         mappings = {
           files = {
