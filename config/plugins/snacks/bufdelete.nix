@@ -32,5 +32,11 @@
       action = ''<cmd>lua Snacks.bufdelete.all()<cr>'';
       options.desc = "Close all buffers";
     }
+    {
+      mode = "n";
+      key = "<leader>bb";
+      action = ''<cmd>Telescope buffers<cr>'';
+      options.desc = "Select buffer";
+    }
   ];
 }
