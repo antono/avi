@@ -14,5 +14,11 @@
     lazygit
     fzf
     fd
+
+    rust-analyzer
+    rustfmt
+
+    pyright
+    ruff
   ];
 }
