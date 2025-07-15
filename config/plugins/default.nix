@@ -26,6 +26,7 @@
     ./telescope
 
     ./git/gitsigns.nix
+    ./git/gitblame.nix
 
     ./lsp/conform.nix
     ./lsp/fastaction.nix
@@ -46,6 +47,7 @@
     ./lang/shell.nix
     ./lang/typescript.nix
     ./lang/yaml.nix
+    ./lang/helm.nix
 
     ./treesitter/treesitter.nix
     ./treesitter/treesitter-textobjects.nix

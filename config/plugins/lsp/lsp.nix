@@ -21,6 +21,10 @@
           };
         };
 
+        helm_ls = {
+          enable = true;
+        };
+
         lua_ls = {
           enable = true;
           settings.telemetry.enable = false;
@@ -40,7 +44,6 @@
         nil_ls.enable = true; # Nix
         dockerls.enable = true; # Docker
         bashls.enable = true;
-
       };
 
       keymaps.lspBuf = {
