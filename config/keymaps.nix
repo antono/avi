@@ -221,15 +221,15 @@
     }
 
     # Delete to void register
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>D";
-      action = "\"_d";
-      options.desc = "Delete to void register";
-    }
+    # {
+    #   mode = [
+    #     "n"
+    #     "v"
+    #   ];
+    #   key = "<leader>D";
+    #   action = "\"_d";
+    #   options.desc = "Delete to void register";
+    # }
   ];
   extraConfigLua = ''
     function ToggleLineNumber()
