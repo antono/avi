@@ -20,5 +20,7 @@
 
     pyright
     ruff
+
+    typos-lsp
   ];
 }
