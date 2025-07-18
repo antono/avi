@@ -35,6 +35,7 @@
     ./lsp/trouble.nix
     ./lsp/aerial.nix
 
+    ./lang/rust.nix
     ./lang/cpp.nix
     ./lang/css.nix
     ./lang/docker.nix
