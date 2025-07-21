@@ -2,12 +2,14 @@
       <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake-colours.svg" width="96px" height="96px" />
       <br>
 
-Akari
+avi (based on Akari)
 
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" /> <br>
-  <div align="center">
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" />
+<br>
 
-  <div align="center">
+<div align="center">
+
+<div align="center">
    <p></p>
    <a href="https://github.com/sioodmy/dotfiles/">
       <img src="https://img.shields.io/github/repo-size/spector700/Akari?color=ea999c&labelColor=303446&style=for-the-badge">
@@ -22,44 +24,39 @@ Akari
 
 ---
 
-<br>
 </div>
-
-![neovim-pic-1](./.github/assets/neovim-pic-1.png)
-![neovim-pic-2](./.github/assets/neovim-pic-2.png)
-![neovim-pic-3](./.github/assets/neovim-pic-3.png)
-<p align="center"> Screenshots Circa: 2024-4-9</p>
-
----
 
 # 🔨 Installation
 
-If you'd like to give it a try before installing: `nix run github:spector700/Akari`
+If you'd like to give it a try before installing:
+`nix run github:spector700/Akari`
 
 ### Adding it as a flake
 
-1: Go to the flake.nix and add `Akari.url = "github:spector700/Akari"` to your inputs.
+1: Go to the flake.nix and add `Akari.url = "github:spector700/Akari"` to your
+inputs.
 
 ```nix
 # flake
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    Akari.url = "github:spector700/Akari";
+    avi.url = "github:antono/avi";
   };
 }
 ```
+
 2: Run nix flake update
 
-3: Install it by adding `inputs.Akari.packages.${system}.default` to your environment.systemPackages or home.packages. If you're using home-manager.
+3: Install it by adding `inputs.avi.packages.${system}.default` to your
+environment.systemPackages or home.packages. If you're using home-manager.
 
 ```nix
 # packages
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    inputs.Akari.packages.${system}.default
+    inputs.avi.packages.${system}.default
   ];
 }
 ```
@@ -70,8 +67,8 @@ If you'd like to give it a try before installing: `nix run github:spector700/Aka
 
 # ⚙️ Configuration
 
-To start configuring, add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
+To start configuring, add or modify the nix files in `./config`. If you add a
+new configuration file, remember to add it to the
 [`config/default.nix`](./config/default.nix) file
 
 ## Testing your new configuration
@@ -83,7 +80,9 @@ nix run .
 ```
 
 # :bookmark_tabs: Resources
-Some sick ass Nixvim setups that I use from.
 
+Some Nixvim setups that I use from.
+
+- [spector700/Akari](https://github.com/spector700/Akari)
 - [khaneliman/khanelivim](https://github.com/khaneliman/khanelivim/tree/main)
 - [niksingh710/nvix](https://github.com/niksingh710/nvix)

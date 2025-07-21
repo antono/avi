@@ -80,5 +80,6 @@
     ./util/project-nvim.nix
     ./util/package-info.nix
     ./util/db.nix
+    ./util/mail.nix
   ];
 }
