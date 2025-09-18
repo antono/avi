@@ -7,7 +7,7 @@
     ./completion/blink.nix
     ./completion/cmp.nix
     ./completion/friendly-snippets.nix
-    ./completion/lspkind.nix
+    # ./completion/lspkind.nix
 
     ./debug/dap.nix
 

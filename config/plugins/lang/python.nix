@@ -10,13 +10,13 @@
       ];
     };
 
-    lint = {
-      lintersByFt.python = [ "mypy" ];
-      linters.mypy = {
-        cmd = lib.getExe pkgs.mypy;
-        args = [ "--ignore-missing-imports" ];
-      };
-    };
+    # lint = {
+    #   lintersByFt.python = [ "mypy" ];
+    #   linters.mypy = {
+    #     cmd = lib.getExe pkgs.mypy;
+    #     args = [ "--ignore-missing-imports" ];
+    #   };
+    # };
 
     lsp.servers = {
       pyright = {
