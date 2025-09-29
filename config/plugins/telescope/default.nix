@@ -12,6 +12,7 @@
       extensions = {
         fzf-native.enable = true;
         zoxide.enable = true;
+        project.enable = false;
         ui-select = {
           enable = true;
           settings = {

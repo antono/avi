@@ -2,7 +2,7 @@
 {
   plugins = {
     project-nvim = {
-      enable = true;
+      enable = false;
       enableTelescope = config.plugins.telescope.enable;
     };
   };
