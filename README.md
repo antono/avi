@@ -1,25 +1,9 @@
 <h1 align="center">
-      <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake-colours.svg" width="96px" height="96px" />
-      <br>
-
-avi (based on Akari)
-
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" />
-<br>
-
-<div align="center">
-
-<div align="center">
-   <p></p>
-   <a href="https://github.com/sioodmy/dotfiles/">
-      <img src="https://img.shields.io/github/repo-size/spector700/Akari?color=ea999c&labelColor=303446&style=for-the-badge">
-   </a>
-      <a = href="https://nixos.org">
-      <img src="https://img.shields.io/badge/NixOS-unstable-blue.svg?style=for-the-badge&labelColor=303446&logo=NixOS&logoColor=white&color=91D7E3">
-    </a>
-   <br>
-</div>
+    <img src="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nix-snowflake-colours.svg" width="96px" height="96px" />
+    <br>
+    avi (based on Akari)
 </h1>
+
 <p align=center>Standalone Nixvim flake based on Lazyvim with some more changes.</p>
 
 ---
@@ -28,13 +12,11 @@ avi (based on Akari)
 
 # 🔨 Installation
 
-If you'd like to give it a try before installing:
-`nix run github:spector700/Akari`
+If you'd like to give it a try before installing: `nix run github:antono/avi`
 
 ### Adding it as a flake
 
-1: Go to the flake.nix and add `Akari.url = "github:spector700/Akari"` to your
-inputs.
+1: Go to the flake.nix and add `avi.url = "github:antono/avi"` to your inputs.
 
 ```nix
 # flake
