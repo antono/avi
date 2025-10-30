@@ -14,6 +14,7 @@
     ./editor/lz-n.nix
     ./editor/neotree.nix
     ./editor/undotree.nix
+    ./editor/visual-whitespace.nix
     ./editor/whichkey.nix
     ./editor/yanky.nix
     ./editor/yazi.nix
