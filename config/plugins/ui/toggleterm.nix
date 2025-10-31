@@ -38,8 +38,8 @@
         "n"
       ];
       key = "<C-g>";
-      action = "<cmd>2ToggleTerm<cr>";
-      options.desc = "Open/Close Terminal 2";
+      action = "<cmd>ToggleTerm<cr>";
+      options.desc = "Open/Close Terminal";
     }
     {
       mode = [
