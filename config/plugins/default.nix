@@ -2,6 +2,7 @@
   imports = [
     ./ai/avante.nix
     ./ai/copilot.nix
+    ./ai/opencode.nix
     ./ai/windsurf.nix
 
     ./completion/blink.nix
