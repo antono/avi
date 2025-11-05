@@ -21,8 +21,8 @@
             add_current = "<leader>a.";
           };
         };
-        provider = "copilot";
-        # provider = "gemini-cli";
+        # provider = "copilot";
+        provider = "gemini-cli";
         providers = {
           claude = {
             endpoint = "https://api.anthropic.com";
