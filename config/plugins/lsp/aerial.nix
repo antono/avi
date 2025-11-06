@@ -40,14 +40,6 @@
       };
     }
     {
-      mode = "v";
-      key = "<leader>cc";
-      action = ''<cmd>lua require('fastaction').range_code_action()<cr>'';
-      options = {
-        desc = "Fastaction code action";
-      };
-    }
-    {
       mode = "n";
       key = "<leader>fs";
       action = "<cmd>Telescope aerial<cr>";

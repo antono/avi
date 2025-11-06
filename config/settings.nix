@@ -1,3 +1,7 @@
+{ pkgs, ... }:
+let
+  isAarch64Darwin = pkgs.system == "aarch64-darwin";
+in
 {
   config = {
     extraConfigLuaPre = ''
@@ -7,11 +11,11 @@
       vim.fn.sign_define("diagnosticsigninfo", { text = " ", texthl = "diagnosticinfo", linehl = "", numhl = "" })
     '';
 
-    # feature that enhances the way Neovim loads and executes Lua modules, 
+    # feature that enhances the way Neovim loads and executes Lua modules,
     # offering improved performance and flexibility.
     luaLoader.enable = true;
 
-    clipboard.providers.wl-copy.enable = true;
+    clipboard.providers.wl-copy.enable = if isAarch64Darwin then false else true;
 
     opts = {
       virtualedit = "block"; # Allow cursor to move where there is no text in visual block mode

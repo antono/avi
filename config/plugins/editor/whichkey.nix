@@ -51,7 +51,7 @@
         {
           __unkeyed-1 = "<leader>u";
           mode = "n";
-          group = "UI/UX";
+          group = "UI";
         }
 
         {
