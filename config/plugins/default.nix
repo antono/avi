@@ -1,6 +1,8 @@
 {
   imports = [
+    ./ai/base.nix
     ./ai/avante.nix
+    ./ai/codecompanion.nix
     ./ai/copilot.nix
     ./ai/opencode.nix
     ./ai/windsurf.nix

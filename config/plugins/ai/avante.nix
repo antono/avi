@@ -11,7 +11,7 @@
 
   plugins = {
     avante = {
-      enable = true;
+      enable = false;
       settings = {
         input = {
           provider = "native";
@@ -39,22 +39,5 @@
         };
       };
     };
-
-    which-key.settings.spec = lib.optionals config.plugins.avante.enable [
-      {
-        __unkeyed-1 = "<leader>a";
-        group = "Avante";
-        icon = "";
-      }
-    ];
   };
-
-  keymaps = lib.optionals config.plugins.avante.enable [
-    {
-      mode = "n";
-      key = "<leader>ac";
-      action = "<CMD>AvanteClear<CR>";
-      options.desc = "avante: clear";
-    }
-  ];
 }
