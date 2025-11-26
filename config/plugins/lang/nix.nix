@@ -35,7 +35,7 @@
       settings =
         let
           flake = ''(builtins.getFlake "${self}")'';
-          system = ''''${builtins.currentSystem}'';
+          system = pkgs.stdenv.hostPlatform.system;
         in
         {
           formatting = {

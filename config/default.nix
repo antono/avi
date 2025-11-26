@@ -2,10 +2,11 @@
 {
   enableMan = false;
   # Import all your configuration modules here
+
   imports = [
     # ./autocmd.nix
     ./keymaps.nix
-    ./settings.nix
+    ({ pkgs, ... }: import ./settings.nix { inherit pkgs; })
     ./plugins
   ];
 

@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  isAarch64Darwin = pkgs.system == "aarch64-darwin";
+  isAarch64Darwin = pkgs.stdenv.hostPlatform.system == "aarch64-darwin";
 in
 {
   config = {

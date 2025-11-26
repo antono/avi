@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  helpers,
   ...
 }:
 {
@@ -11,7 +10,7 @@
 
   plugins = {
     image = {
-      enable = helpers.enableExceptInTests;
+      enable = lib.nixvim.enableExceptInTests;
       settings = {
         integrations.markdown = {
           clearInInsertMode = true;
