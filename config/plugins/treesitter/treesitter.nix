@@ -2,8 +2,8 @@
 {
   plugins = {
     treesitter = {
-      enable = true;
-      folding = true;
+      enable = false;
+      folding.enable = true;
 
       settings = {
         highlight = {
