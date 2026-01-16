@@ -49,10 +49,6 @@
             priority = 100;
           }
           {
-            name = "treesitter";
-            priority = 80;
-          }
-          {
             name = "luasnip";
             priority = 70;
           }

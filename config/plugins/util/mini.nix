@@ -29,6 +29,6 @@
       };
     };
 
-    ts-context-commentstring.enable = true;
+    # ts-context-commentstring.enable = true; # Temporarily disabled due to treesitter conflict
   };
 }
