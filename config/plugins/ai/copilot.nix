@@ -83,5 +83,11 @@
       action = "<cmd>CopilotChatModels<CR>";
       options.desc = "List Available Models";
     }
+    {
+      mode = "n";
+      key = "<leader>Ae";
+      action = "<cmd>CopilotChatExplain<CR>";
+      options.desc = "Copilot explain";
+    }
   ];
 }
