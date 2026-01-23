@@ -54,8 +54,8 @@
     ./lang/yaml.nix
     ./lang/helm.nix
 
-    ./treesitter/treesitter.nix
-    ./treesitter/treesitter-textobjects.nix
+     ./treesitter/treesitter.nix
+     # ./treesitter/treesitter-textobjects.nix
 
     ./ui/alpha.nix
     ./ui/bufferline.nix

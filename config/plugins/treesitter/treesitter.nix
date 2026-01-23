@@ -1,8 +1,8 @@
 { config, lib, ... }:
 {
   plugins = {
-    treesitter = {
-      enable = false;
+     treesitter = {
+       enable = true;
       folding.enable = true;
 
       settings = {
@@ -23,8 +23,8 @@
       nixvimInjections = true;
     };
 
-    treesitter-context = {
-      inherit (config.plugins.treesitter) enable;
+     treesitter-context = {
+       enable = false;
       settings = {
         max_lines = 4;
         min_window_height = 40;
@@ -33,8 +33,8 @@
       };
     };
 
-    treesitter-refactor = {
-      inherit (config.plugins.treesitter) enable;
+     treesitter-refactor = {
+       enable = false;
 
       settings = {
         highlight_definitions = {

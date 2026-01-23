@@ -74,6 +74,6 @@
       };
     };
 
-    # ts-autotag.enable = true; # Temporarily disabled due to treesitter conflict
+    ts-autotag.enable = true;
   };
 }

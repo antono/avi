@@ -7,7 +7,7 @@
 {
   plugins = {
     nix.enable = true;
-    # hmts.enable = true; # Temporarily disabled due to treesitter conflict
+    hmts.enable = true;
     nix-develop.enable = true;
 
     conform-nvim.settings = {
