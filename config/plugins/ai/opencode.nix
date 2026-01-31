@@ -1,7 +1,7 @@
 { config, lib, ... }:
 {
   plugins.opencode = {
-    enable = true;
+    enable = false;
     settings = {
       auto_reload = false;
       port = 8080;
