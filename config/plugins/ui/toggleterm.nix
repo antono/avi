@@ -38,8 +38,23 @@
         "n"
       ];
       key = "<C-g>";
-      action = "<cmd>ToggleTerm<cr>";
-      options.desc = "Open/Close Terminal";
+      action.__raw = ''
+        function()
+          vim.cmd(vim.v.count1 .. "ToggleTerm")
+        end
+      '';
+      options.desc = "Open/Close Terminal with count";
+    }
+    {
+      mode = "i";
+      key = "<C-g>";
+      action.__raw = ''
+        function()
+          vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+          vim.cmd(vim.v.count1 .. "ToggleTerm")
+        end
+      '';
+      options.desc = "Open/Close Terminal with count";
     }
     {
       mode = [

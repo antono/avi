@@ -3,6 +3,7 @@
     # highlight_yank = { };
     vim_enter = { };
     indentscope = { };
+    toggleterm_mappings = { };
     # restore_cursor = { };
   };
 
@@ -36,6 +37,20 @@
         __raw = ''
           function()
             vim.b.miniindentscope_disable = true
+          end
+        '';
+      };
+    }
+    {
+      group = "toggleterm_mappings";
+      event = "TermEnter";
+      pattern = "term://*toggleterm#*";
+      callback = {
+        __raw = ''
+          function()
+            vim.keymap.set('t', '<C-g>', function()
+              vim.cmd(vim.v.count1 .. "ToggleTerm")
+            end, { buffer = 0 })
           end
         '';
       };

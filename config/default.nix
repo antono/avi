@@ -4,7 +4,7 @@
   # Import all your configuration modules here
 
   imports = [
-    # ./autocmd.nix
+    ./autocmd.nix
     ./keymaps.nix
     ({ pkgs, ... }: import ./settings.nix { inherit pkgs; })
     ./plugins
