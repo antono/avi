@@ -6,17 +6,12 @@
 {
   extraPackages = with pkgs; [
     marksman
+    imagemagick
   ];
 
   plugins = {
     image = {
-      enable = lib.nixvim.enableExceptInTests;
-      settings = {
-        integrations.markdown = {
-          clearInInsertMode = true;
-          onlyRenderImageAtCursor = true;
-        };
-      };
+      enable = false;
     };
 
     markdown-preview = {

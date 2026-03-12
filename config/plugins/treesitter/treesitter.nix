@@ -3,9 +3,9 @@
   plugins = {
      treesitter = {
        enable = true;
-      folding.enable = true;
+       folding.enable = true;
 
-      settings = {
+       settings = {
         highlight = {
           additional_vim_regex_highlighting = true;
           enable = true;
