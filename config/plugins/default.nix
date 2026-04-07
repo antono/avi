@@ -32,7 +32,7 @@
     ./git/gitsigns.nix
     ./git/gitblame.nix
 
-    ./lsp/conform.nix
+    # ./lsp/conform.nix
     ./lsp/fastaction.nix
     ./lsp/lsp.nix
     ./lsp/lspsaga.nix
@@ -54,8 +54,8 @@
     ./lang/yaml.nix
     ./lang/helm.nix
 
-     ./treesitter/treesitter.nix
-     # ./treesitter/treesitter-textobjects.nix
+    ./treesitter/treesitter.nix
+    # ./treesitter/treesitter-textobjects.nix
 
     ./ui/alpha.nix
     ./ui/bufferline.nix
