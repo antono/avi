@@ -7,7 +7,7 @@
 {
   plugins = {
     nix.enable = true;
-    hmts.enable = true;
+    # hmts.enable = true;
     nix-develop.enable = true;
 
     conform-nvim.settings = {

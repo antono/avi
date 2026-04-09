@@ -32,7 +32,7 @@
     ./git/gitsigns.nix
     ./git/gitblame.nix
 
-    # ./lsp/conform.nix
+    ./lsp/conform.nix
     ./lsp/fastaction.nix
     ./lsp/lsp.nix
     ./lsp/lspsaga.nix
