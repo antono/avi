@@ -44,8 +44,10 @@
 
     lsp.servers = {
       svelte.enable = true;
+      # biome.enable = true;
 
-      eslint = {
+      #eslint = {
+      biome = {
         enable = true;
         filetypes = [
           "javascript"
