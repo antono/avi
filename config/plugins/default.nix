@@ -1,7 +1,8 @@
 {
   imports = [
-    ./ai/base.nix
+    ./ai/agentic.nix
     ./ai/avante.nix
+    ./ai/base.nix
     ./ai/codecompanion.nix
     ./ai/copilot.nix
     ./ai/opencode.nix

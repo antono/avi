@@ -2,7 +2,7 @@
 {
   plugins = {
     copilot-lua = {
-      enable = true;
+      enable = false;
       settings = {
         panel.enabled = !config.plugins.blink-cmp-copilot.enable;
         suggestion.enabled = !config.plugins.blink-cmp-copilot.enable;

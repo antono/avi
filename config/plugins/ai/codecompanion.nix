@@ -1,7 +1,7 @@
 { config, lib, ... }:
 {
   plugins.codecompanion = {
-    enable = true;
+    enable = false;
   };
 
   keymaps = lib.optionals config.plugins.codecompanion.enable [
