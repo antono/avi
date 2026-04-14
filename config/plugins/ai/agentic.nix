@@ -25,7 +25,7 @@ in
     '';
   };
 
-  config = lib.mkIf (cfg.enable or false) {
+  config = lib.mkIf cfg.enable {
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "agentic-nvim";
@@ -66,8 +66,25 @@ in
         require("agentic").restore_session()
       end, { desc = "Restore Agentic session" })
 
+      vim.api.nvim_create_user_command('AgenticSwitchProvider', function()
+        require("agentic").switch_provider()
+      end, { desc = "Switch to next provider" })
+
+      vim.api.nvim_create_user_command('AgenticStopGeneration', function()
+        require("agentic").stop_generation()
+      end, { desc = "Stop generation" })
+
+      vim.api.nvim_create_user_command('AgenticRotateLayout', function()
+        require("agentic").rotate_layout()
+      end, { desc = "Rotate chat layout" })
+
       require("agentic").setup({
         provider = "${cfg.provider or "opencode-acp"}",
+        diff_preview = {
+          enabled = true,
+          layout = "split",
+          center_on_navigate_hunks = true,
+        },
       })
     '';
 
@@ -119,6 +136,24 @@ in
         key = "<leader>aD";
         action = "<cmd>AgenticAddAllDiagnostics<CR>";
         options.desc = "Add all buffer diagnostics";
+      }
+      {
+        mode = "n";
+        key = "<leader>ap";
+        action = "<cmd>AgenticSwitchProvider<CR>";
+        options.desc = "Switch provider";
+      }
+      {
+        mode = "n";
+        key = "<leader>ax";
+        action = "<cmd>AgenticStopGeneration<CR>";
+        options.desc = "Stop generation";
+      }
+      {
+        mode = "n";
+        key = "<leader>al";
+        action = "<cmd>AgenticRotateLayout<CR>";
+        options.desc = "Rotate layout";
       }
     ];
   };
