@@ -1,3 +1,4 @@
 .direnv
 result*
 .opencode/package-lock.json
+.gitnexus
