@@ -25,7 +25,7 @@
   plugins = lib.mkMerge [
     {
       blink-cmp = {
-        enable = true;
+        enable = false;
 
         settings = {
           completion = {
@@ -113,97 +113,95 @@
           };
           snippets.preset = "mini_snippets";
           sources = {
-            default =
-              [
-                "buffer"
-                "calc"
-                "dictionary"
-                "emoji"
-                "git"
-                "lsp"
-                "path"
-                "snippets"
-                "spell"
-              ]
-              ++ lib.optionals config.plugins.copilot-lua.enable [
-                "copilot"
-              ]
-              ++ lib.optionals config.plugins.avante.enable [
-                "avante"
-              ];
-            providers =
-              {
-                # BUILT-IN SOURCES
-                lsp.score_offset = 4;
-                buffer = {
-                  opts = {
-                    # Get suggestions from all "normal" open buffers
-                    get_bufnrs.__raw = ''
-                      function()
-                        return vim.tbl_filter(function(bufnr)
-                          return vim.bo[bufnr].buftype == ""
-                        end, vim.api.nvim_list_bufs())
-                       end
-                    '';
-                  };
-                };
-                # Community sources
-                copilot = {
-                  name = "copilot";
-                  module = "blink-copilot";
-                  async = true;
-                  score_offset = 100;
-                };
-                dictionary = {
-                  name = "Dict";
-                  module = "blink-cmp-dictionary";
-                  min_keyword_length = 3;
-                  enabled = false;
-                };
-                emoji = {
-                  name = "Emoji";
-                  module = "blink-emoji";
-                  score_offset = 1;
-                };
-                git = {
-                  name = "Git";
-                  module = "blink-cmp-git";
-                  enabled = false;
-                  score_offset = 100;
-                  should_show_items.__raw = ''
+            default = [
+              "buffer"
+              "calc"
+              "dictionary"
+              "emoji"
+              "git"
+              "lsp"
+              "path"
+              "snippets"
+              "spell"
+            ]
+            ++ lib.optionals config.plugins.copilot-lua.enable [
+              "copilot"
+            ]
+            ++ lib.optionals config.plugins.avante.enable [
+              "avante"
+            ];
+            providers = {
+              # BUILT-IN SOURCES
+              lsp.score_offset = 4;
+              buffer = {
+                opts = {
+                  # Get suggestions from all "normal" open buffers
+                  get_bufnrs.__raw = ''
                     function()
-                      return vim.o.filetype == 'gitcommit' or vim.o.filetype == 'markdown'
-                    end
+                      return vim.tbl_filter(function(bufnr)
+                        return vim.bo[bufnr].buftype == ""
+                      end, vim.api.nvim_list_bufs())
+                     end
                   '';
-                  opts = {
-                    git_centers = {
-                      github = {
-                        issue = {
-                          on_error.__raw = "function(_,_) return true end";
-                        };
+                };
+              };
+              # Community sources
+              copilot = {
+                name = "copilot";
+                module = "blink-copilot";
+                async = true;
+                score_offset = 100;
+              };
+              dictionary = {
+                name = "Dict";
+                module = "blink-cmp-dictionary";
+                min_keyword_length = 3;
+                enabled = false;
+              };
+              emoji = {
+                name = "Emoji";
+                module = "blink-emoji";
+                score_offset = 1;
+              };
+              git = {
+                name = "Git";
+                module = "blink-cmp-git";
+                enabled = false;
+                score_offset = 100;
+                should_show_items.__raw = ''
+                  function()
+                    return vim.o.filetype == 'gitcommit' or vim.o.filetype == 'markdown'
+                  end
+                '';
+                opts = {
+                  git_centers = {
+                    github = {
+                      issue = {
+                        on_error.__raw = "function(_,_) return true end";
                       };
                     };
                   };
                 };
-                spell = {
-                  name = "Spell";
-                  module = "blink-cmp-spell";
-                  score_offset = 1;
-                };
-              }
-              // lib.optionalAttrs config.plugins.blink-compat.enable {
-                calc = {
-                  name = "calc";
-                  module = "blink.compat.source";
-                  score_offset = 2;
-                };
-              }
-              // lib.optionalAttrs (config.plugins.avante.enable && config.plugins.blink-compat.enable) {
-                avante = {
-                  module = "blink-cmp-avante";
-                  name = "Avante";
-                };
               };
+              spell = {
+                name = "Spell";
+                module = "blink-cmp-spell";
+                score_offset = 1;
+              };
+            }
+            // lib.optionalAttrs config.plugins.blink-compat.enable {
+              calc = {
+                name = "calc";
+                module = "blink.compat.source";
+                score_offset = 2;
+              };
+            }
+            // lib.optionalAttrs (config.plugins.avante.enable && config.plugins.blink-compat.enable) {
+              avante = {
+                module = "blink-cmp-avante";
+                name = "Avante";
+              };
+            };
           };
         };
       };
