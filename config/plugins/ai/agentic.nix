@@ -29,12 +29,16 @@ in
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "agentic-nvim";
-        version = "58c38cf";
+        version = "telescope";
+        # NOTE: To update rev/hash: 1) Get new SHA from `gh api repos/antono/agentic.nvim/branches/telescope --jq '.commit.sha'`
+        # 2) Use ANY placeholder hash (e.g., "sha256-0000000000000000000000000000000000000000000")
+        # 3) Run `nix run .` to get the correct hash from the "got:" error message
+        # 4) Update sha256 with the "got:" hash from the error
         src = pkgs.fetchFromGitHub {
-          owner = "carlos-algms";
+          owner = "antono";
           repo = "agentic.nvim";
-          rev = "58c38cf5a8e77b3a88853e6f99cefdd5bcfbbe08";
-          sha256 = "sha256-0hnrhjpjrdvsOZ9SegWFwnBy5RP1w/GKKcY2cRUVM/s=";
+          rev = "8b72beecdd22ad8756cec8ed6f32ead8857f4d9c";
+          sha256 = "sha256-5NR2WrPjOUpAO3qAteGSVR8twUHlL429W5cPsHI0MfY=";
         };
         doCheck = false;
       })
