@@ -66,7 +66,7 @@
     ./ui/lualine.nix
     ./ui/noice.nix
     ./ui/notify.nix
-    ./ui/nui.nix
+    # ./ui/nui.nix
     ./ui/precognition.nix
     ./ui/toggleterm.nix
     ./ui/ufo.nix

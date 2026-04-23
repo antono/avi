@@ -72,6 +72,7 @@
       };
       keymaps = {
         "<leader>fZ" = {
+          # FIXME: does not work
           action = "zoxide";
           options.desc = "Zoxide folder list";
         };

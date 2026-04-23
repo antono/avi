@@ -15,7 +15,7 @@
       open_mapping = "[[<leader>fT]]";
       hide_numbers = true;
       shade_terminals = true;
-      start_in_insert = true;
+      start_in_insert = false;
       terminal_mappings = true;
       persist_mode = false;
       insert_mappings = true;
