@@ -108,6 +108,10 @@
           action = "git_commits";
           options.desc = "commits";
         };
+        "<leader>gw" = {
+          action = "git_worktree";
+          options.desc = "git worktree";
+        };
         "<leader>fb" = {
           action = "buffers";
           options.desc = "View buffers";

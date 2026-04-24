@@ -32,6 +32,8 @@
 
     ./git/gitsigns.nix
     ./git/gitblame.nix
+    ./git/git-conflict.nix
+    ./git/git-worktree.nix
 
     ./lsp/conform.nix
     ./lsp/fastaction.nix
