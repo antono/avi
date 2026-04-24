@@ -34,11 +34,17 @@ in
         # 2) Use ANY placeholder hash (e.g., "sha256-0000000000000000000000000000000000000000000")
         # 3) Run `nix run .` to get the correct hash from the "got:" error message
         # 4) Update sha256 with the "got:" hash from the error
+        # src = pkgs.fetchFromGitHub {
+        #   owner = "antono";
+        #   repo = "agentic.nvim";
+        #   rev = "8b72beecdd22ad8756cec8ed6f32ead8857f4d9c";
+        #   sha256 = "sha256-5NR2WrPjOUpAO3qAteGSVR8twUHlL429W5cPsHI0MfY=";
+        # };
         src = pkgs.fetchFromGitHub {
-          owner = "antono";
+          owner = "carlos-algms";
           repo = "agentic.nvim";
-          rev = "8b72beecdd22ad8756cec8ed6f32ead8857f4d9c";
-          sha256 = "sha256-5NR2WrPjOUpAO3qAteGSVR8twUHlL429W5cPsHI0MfY=";
+          rev = "HEAD";
+          sha256 = "sha256-5bNpbupqRveqCgQ+jMSYIgqAQrqC7yOlt+avDsk95i4=";
         };
         doCheck = false;
       })
