@@ -31,7 +31,7 @@
       marksman.enable = true;
 
       ltex = {
-        enable = true;
+        enable = false;
         filetypes = [
           "markdown"
           "text"
