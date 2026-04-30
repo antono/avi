@@ -50,45 +50,99 @@ in
     keymaps = [
       {
         mode = "n";
-        key = "<leader>rq";
-        action = "<cmd>QuickfixReview<CR>";
-        options.desc = "Show quickfix of review comments";
-      }
-      {
-        mode = "n";
-        key = "<leader>rc";
-        action = "<cmd>ReviewComment<CR>";
-        options.desc = "Add review comment";
+        key = "<leader>ri";
+        action = "<cmd>ReviewAddIssue<CR>";
+        options.desc = "Add ISSUE review comment";
       }
       {
         mode = "v";
-        key = "<leader>rc";
-        action = "<cmd>ReviewComment<CR>";
-        options.desc = "Add review comment from selection";
-      }
-      {
-        mode = "n";
-        key = "<leader>rl";
-        action = "<cmd>ReviewList<CR>";
-        options.desc = "Open review comment list";
+        key = "<leader>ri";
+        action = "<cmd>ReviewAddIssue<CR>";
+        options.desc = "Add ISSUE review comment from selection";
       }
       {
         mode = "n";
         key = "<leader>rs";
-        action = "<cmd>ReviewShow<CR>";
-        options.desc = "Show review comment at cursor";
+        action = "<cmd>ReviewAddSuggestion<CR>";
+        options.desc = "Add SUGGESTION review comment";
+      }
+      {
+        mode = "v";
+        key = "<leader>rs";
+        action = "<cmd>ReviewAddSuggestion<CR>";
+        options.desc = "Add SUGGESTION review comment from selection";
       }
       {
         mode = "n";
-        key = "<leader>re";
-        action = "<cmd>ReviewExport<CR>";
-        options.desc = "Export review comments";
+        key = "<leader>rn";
+        action = "<cmd>ReviewAddNote<CR>";
+        options.desc = "Add NOTE review comment";
+      }
+      {
+        mode = "v";
+        key = "<leader>rn";
+        action = "<cmd>ReviewAddNote<CR>";
+        options.desc = "Add NOTE review comment from selection";
+      }
+      {
+        mode = "n";
+        key = "<leader>rp";
+        action = "<cmd>ReviewAddPraise<CR>";
+        options.desc = "Add PRAISE review comment";
+      }
+      {
+        mode = "v";
+        key = "<leader>rp";
+        action = "<cmd>ReviewAddPraise<CR>";
+        options.desc = "Add PRAISE review comment from selection";
       }
       {
         mode = "n";
         key = "<leader>rd";
         action = "<cmd>ReviewDelete<CR>";
-        options.desc = "Delete review comment";
+        options.desc = "Delete review comment at cursor";
+      }
+      {
+        mode = "n";
+        key = "<leader>rv";
+        action = "<cmd>ReviewView<CR>";
+        options.desc = "View review comment at cursor";
+      }
+      {
+        mode = "n";
+        key = "<leader>re";
+        action = "<cmd>ReviewExport<CR>";
+        options.desc = "Export review to markdown";
+      }
+      {
+        mode = "n";
+        key = "<leader>rc";
+        action = "<cmd>ReviewClear<CR>";
+        options.desc = "Clear all review comments";
+      }
+      {
+        mode = "n";
+        key = "<leader>rw";
+        action = "<cmd>ReviewSave<CR>";
+        options.desc = "Save review to disk";
+      }
+      {
+        mode = "n";
+        key = "<leader>rl";
+        action = "<cmd>ReviewLoad<CR>";
+        options.desc = "Load review from disk";
+      }
+      {
+        mode = "n";
+        key = "<leader>rS";
+        action = "<cmd>ReviewSummary<CR>";
+        options.desc = "Show review comment summary";
+      }
+      {
+        mode = "n";
+        key = "<leader>rg";
+        action = "<cmd>ReviewGoto<CR>";
+        options.desc = "Jump to real file from diff";
       }
     ];
   };
