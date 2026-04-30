@@ -6,6 +6,7 @@
     ./ai/codecompanion.nix
     ./ai/copilot.nix
     ./ai/opencode.nix
+    ./ai/review.nix
     ./ai/windsurf.nix
 
     ./completion/blink.nix
