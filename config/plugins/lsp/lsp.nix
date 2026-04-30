@@ -30,9 +30,9 @@
           settings.telemetry.enable = false;
         };
 
-        # rust_analyzer = {
-        #   enable = true;
-        # };
+        rust_analyzer = {
+          enable = true;
+        };
 
         ts_ls.enable = true; # TS/JS
         cssls.enable = true;
@@ -73,8 +73,8 @@
     {
       mode = "n";
       key = "<leader>cl";
-      action = "<cmd>LspInfo<cr>";
-      options.desc = "Lsp Info";
+      action = "<cmd>checkhealth vim.lsp<cr>";
+      options.desc = "Check Health";
     }
   ];
 }

@@ -132,32 +132,5 @@
         desc = "Delete buffers to the left";
       };
     }
-
-    {
-      mode = "n";
-      key = "<leader>bP";
-      action = "<cmd>BufferLineTogglePin<cr>";
-      options = {
-        desc = "Toggle pin";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>bp";
-      action = "<cmd>BufferLinePick<cr>";
-      options = {
-        desc = "Pick";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>bP";
-      action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
-      options = {
-        desc = "Delete non-pinned buffers";
-      };
-    }
   ];
 }
