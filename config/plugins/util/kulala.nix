@@ -2,7 +2,8 @@
 let
 
   kulala = pkgs.vimUtils.buildVimPlugin {
-    name = "kulala-nvim";
+    pname = "kulala-nvim";
+    version = "7649576";
     src = pkgs.fetchFromGitHub {
       owner = "mistweaverco";
       repo = "kulala.nvim";

@@ -1,30 +1,14 @@
 { config, lib, ... }:
 {
   plugins = {
-     treesitter = {
-       enable = true;
-       folding.enable = true;
-
-       settings = {
-        highlight = {
-          additional_vim_regex_highlighting = true;
-          enable = true;
-          disable = # Lua
-            ''
-              function(lang, bufnr)
-                return vim.api.nvim_buf_line_count(bufnr) > 10000
-              end
-            '';
-        };
-
-        incremental_selection.enable = true;
-        indent.enable = true;
-      };
+    treesitter = {
+      enable = true;
+      folding.enable = true;
       nixvimInjections = true;
     };
 
-     treesitter-context = {
-       enable = false;
+    treesitter-context = {
+      enable = false;
       settings = {
         max_lines = 4;
         min_window_height = 40;
@@ -33,8 +17,8 @@
       };
     };
 
-     treesitter-refactor = {
-       enable = false;
+    treesitter-refactor = {
+      enable = false;
 
       settings = {
         highlight_definitions = {

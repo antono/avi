@@ -3,7 +3,8 @@
   extraPlugins = [
     pkgs.vimPlugins.notmuch-vim
     (pkgs.vimUtils.buildVimPlugin {
-      name = "notmuch";
+      pname = "notmuch";
+      version = "e4b0a6c";
       src = pkgs.fetchFromGitHub {
         owner = "yousefakbar";
         repo = "notmuch.nvim";
