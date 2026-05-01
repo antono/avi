@@ -19,13 +19,13 @@
       autoLoad = true;
     };
 
-    conform-nvim.settings = {
-      formatters_by_ft.markdown = [ "deno_fmt" ];
-
-      formatters = {
-        deno_fmt.command = lib.getExe pkgs.deno;
-      };
-    };
+    # conform-nvim.settings = {
+    #   formatters_by_ft.markdown = [ "deno_fmt" ];
+    #
+    #   formatters = {
+    #     deno_fmt.command = lib.getExe pkgs.deno;
+    #   };
+    # };
 
     lsp.servers = {
       marksman.enable = true;
