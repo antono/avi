@@ -33,7 +33,7 @@
         {
           type = "button";
           val = "  Find File";
-          on_press.raw = "require('telescope.builtin').find_files";
+          on_press.__raw = "require('telescope.builtin').find_files";
           opts = {
             keymap = [
               "n"
@@ -83,7 +83,7 @@
         {
           type = "button";
           val = "󰈚  Recent Files";
-          on_press.raw = "require('telescope.builtin').oldfiles";
+          on_press.__raw = "require('telescope.builtin').oldfiles";
           opts = {
             keymap = [
               "n"
@@ -107,8 +107,8 @@
         (padding 1)
         {
           type = "button";
-          val = "󰈭  Find Word";
-          on_press.raw = "require('telescope.builtin').live_grep";
+          val = "󰈭  Live Grep";
+          on_press.__raw = "require('telescope.builtin').live_grep";
           opts = {
             keymap = [
               "n"
@@ -133,7 +133,7 @@
         {
           type = "button";
           val = "  Restore Session";
-          on_press.raw = "require('persistence').load()";
+          on_press.__raw = "function() require('persistence').load() end";
           opts = {
             keymap = [
               "n"
