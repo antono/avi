@@ -44,7 +44,23 @@ in
     ];
 
     extraConfigLua = ''
-      require("quickfix-review").setup()
+      require("quickfix-review").setup({
+        keymaps = {},
+        -- Export filename (nil = clipboard only)
+        export_file = nil,
+        comment_types = {
+          bug = { sign = '🐛', highlight = 'DiagnosticError', description = 'Bug' },
+          idea = { sign = '💡', highlight = 'DiagnosticInfo', description = 'Idea' },
+          security = { sign = '🔒', highlight = 'DiagnosticError', description = 'Security concern' },
+          perf = { sign = '⚡', highlight = 'DiagnosticWarn', description = 'Performance issue' },
+        },
+        keymaps = {
+          add_bug = '<leader>rb',
+          add_idea = '<leader>ri',
+          add_security = '<leader>rs',
+          add_perf = '<leader>rp',
+        },
+      })
     '';
 
     keymaps = [
@@ -53,48 +69,6 @@ in
         key = "<leader>ri";
         action = "<cmd>ReviewAddIssue<CR>";
         options.desc = "Add ISSUE review comment";
-      }
-      {
-        mode = "v";
-        key = "<leader>ri";
-        action = "<cmd>ReviewAddIssue<CR>";
-        options.desc = "Add ISSUE review comment from selection";
-      }
-      {
-        mode = "n";
-        key = "<leader>rs";
-        action = "<cmd>ReviewAddSuggestion<CR>";
-        options.desc = "Add SUGGESTION review comment";
-      }
-      {
-        mode = "v";
-        key = "<leader>rs";
-        action = "<cmd>ReviewAddSuggestion<CR>";
-        options.desc = "Add SUGGESTION review comment from selection";
-      }
-      {
-        mode = "n";
-        key = "<leader>rn";
-        action = "<cmd>ReviewAddNote<CR>";
-        options.desc = "Add NOTE review comment";
-      }
-      {
-        mode = "v";
-        key = "<leader>rn";
-        action = "<cmd>ReviewAddNote<CR>";
-        options.desc = "Add NOTE review comment from selection";
-      }
-      {
-        mode = "n";
-        key = "<leader>rp";
-        action = "<cmd>ReviewAddPraise<CR>";
-        options.desc = "Add PRAISE review comment";
-      }
-      {
-        mode = "v";
-        key = "<leader>rp";
-        action = "<cmd>ReviewAddPraise<CR>";
-        options.desc = "Add PRAISE review comment from selection";
       }
       {
         mode = "n";
@@ -112,31 +86,13 @@ in
         mode = "n";
         key = "<leader>ry";
         action = "<cmd>ReviewExport<CR>";
-        options.desc = "Yank review and export md";
+        options.desc = "Yank review to clipboard";
       }
       {
         mode = "n";
         key = "<leader>rc";
         action = "<cmd>ReviewClear<CR>";
         options.desc = "Clear all review comments";
-      }
-      {
-        mode = "n";
-        key = "<leader>rw";
-        action = "<cmd>ReviewSave<CR>";
-        options.desc = "Save review to disk";
-      }
-      {
-        mode = "n";
-        key = "<leader>rl";
-        action = "<cmd>ReviewLoad<CR>";
-        options.desc = "Load review from disk";
-      }
-      {
-        mode = "n";
-        key = "<leader>rS";
-        action = "<cmd>ReviewSummary<CR>";
-        options.desc = "Show review comment summary";
       }
       {
         mode = "n";
