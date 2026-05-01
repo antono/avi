@@ -16,12 +16,12 @@ in
     example = {
       enable = true;
     };
-    description = """
+    description = "" "
       Enable quickfix-review.nvim - Turn review comments into quickfix entries.
       Features: integrate with review.nvim to show comments as quickfix list entries,
       jump between comments, and navigate review comments directly from the quickfix window.
       Requires: Neovim 0.12+ and review.nvim.
-    """;
+    " "";
   };
 
   config = lib.mkIf cfg.enable {
@@ -47,19 +47,6 @@ in
       require("quickfix-review").setup()
     '';
 
-    # Keymaps hint:
-    # <leader>ri - Add ISSUE review comment
-    # <leader>rs - Add SUGGESTION review comment
-    # <leader>rn - Add NOTE review comment
-    # <leader>rp - Add PRAISE review comment
-    # <leader>rd - Delete review comment at cursor
-    # <leader>rv - View review comment at cursor
-    # <leader>re - Export review to markdown
-    # <leader>rc - Clear all review comments
-    # <leader>rw - Save review to disk
-    # <leader>rl - Load review from disk
-    # <leader>rS - Show review comment summary
-    # <leader>rj - Jump to real file from diff
     keymaps = [
       {
         mode = "n";
@@ -123,9 +110,9 @@ in
       }
       {
         mode = "n";
-        key = "<leader>re";
+        key = "<leader>ry";
         action = "<cmd>ReviewExport<CR>";
-        options.desc = "Export review to markdown";
+        options.desc = "Yank review and export md";
       }
       {
         mode = "n";
@@ -153,7 +140,7 @@ in
       }
       {
         mode = "n";
-        key = "<leader>rj";
+        key = "<leader>rg";
         action = "<cmd>ReviewGoto<CR>";
         options.desc = "Jump to real file from diff";
       }

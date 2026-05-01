@@ -7,6 +7,7 @@
     ./ai/copilot.nix
     ./ai/opencode.nix
     ./ai/review.nix
+    ./ai/review-quickfix.nix
     ./ai/windsurf.nix
 
     ./completion/blink.nix
