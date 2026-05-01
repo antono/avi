@@ -6,7 +6,9 @@
       settings = {
         panel.enabled = !config.plugins.blink-cmp-copilot.enable;
         suggestion.enabled = !config.plugins.blink-cmp-copilot.enable;
+        suggestion.auto_trigger = false;
         notification.enabled = false;
+        disable_limit_reached_message = true;
       };
     };
 
