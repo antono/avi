@@ -157,7 +157,7 @@
         (padding 1)
         {
           type = "button";
-          val = "󰼶   Devenv Shell";
+          val = "󰼶  Devenv Shell";
           on_press.__raw = "function() require('nix-develop').devenv_shell({'.', '--impure'}) end";
           opts = {
             keymap = [
