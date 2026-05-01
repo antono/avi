@@ -6,6 +6,7 @@
       settings = {
         panel.enabled = !config.plugins.blink-cmp-copilot.enable;
         suggestion.enabled = !config.plugins.blink-cmp-copilot.enable;
+        notification.enabled = false;
       };
     };
 
