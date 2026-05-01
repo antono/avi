@@ -17,7 +17,7 @@
       shade_terminals = true;
       start_in_insert = false;
       terminal_mappings = true;
-      persist_mode = false;
+      persist_mode = true;
       insert_mappings = true;
       close_on_exit = true;
       shell = "~/.nix-profile/bin/bash";
