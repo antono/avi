@@ -7,7 +7,7 @@
 {
   plugins = {
     nix.enable = true;
-    # hmts.enable = true;
+    # hmts.enable = true; # FIXME: temporary broken
     nix-develop.enable = true;
 
     conform-nvim.settings = {
@@ -43,7 +43,7 @@
           };
           nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
           options = {
-            nixvim.expr = ''${flake}.packages.${system}.nvim.options'';
+            nixvim.expr = "${flake}.packages.${system}.nvim.options";
             # NOTE: These will be passed in from outside using `.extend` from the flake installing this package
             # nix-darwin.expr = ''${flake}.darwinConfigurations.khanelimac.options'';
             # nixos.expr = ''${flake}.nixosConfigurations.khanelinix.options'';

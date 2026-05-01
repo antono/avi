@@ -86,7 +86,10 @@ in
       local opt = vim.opt
       local g = vim.g
       local o = vim.o
-        -- Neovide
+
+      vim.opt.runtimepath:append(vim.fn.expand("~/Code/cerbo.nvim"))
+
+      -- Neovide
       if g.neovide then
         -- Neovide options
         g.neovide_fullscreen = false
@@ -98,13 +101,13 @@ in
         g.neovide_cursor_vfx_particle_lifetime = 5.0
         g.neovide_cursor_vfx_particle_density = 14.0
         g.neovide_cursor_vfx_particle_speed = 12.0
-        g.neovide_transparency = 0.8
+        g.neovide_transparency = 0.9
 
         -- Neovide Fonts
-        o.guifont = "MonoLisa Trial:Medium:h15"
+        -- o.guifont = "MonoLisa Trial:Medium:h15"
         -- o.guifont = "CommitMono:Medium:h15"
         -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
-        -- o.guifont = "FiraMono Nerd Font:Medium:h14"
+        o.guifont = "FiraMono Nerd Font:Medium:h14"
         -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
         -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
         -- o.guifont = "Liga SFMono Nerd Font:b:h15"
