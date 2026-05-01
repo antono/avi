@@ -91,24 +91,31 @@ in
 
       -- Neovide
       if g.neovide then
+        vim.print(vim.g.neovide_version)
         -- Neovide options
         g.neovide_fullscreen = false
         g.neovide_hide_mouse_when_typing = false
-        g.neovide_refresh_rate = 165
+        g.neovide_refresh_rate = 60
         g.neovide_cursor_vfx_mode = "ripple"
         g.neovide_cursor_animate_command_line = true
         g.neovide_cursor_animate_in_insert_mode = true
         g.neovide_cursor_vfx_particle_lifetime = 5.0
         g.neovide_cursor_vfx_particle_density = 14.0
         g.neovide_cursor_vfx_particle_speed = 12.0
-        g.neovide_transparency = 0.9
+        g.neovide_opacity = 0.9
+        g.neovide_scale_factor = 1.0
+
+        g.neovide_progress_bar_enabled = true
+        g.neovide_progress_bar_height = 5.0
+        g.neovide_progress_bar_animation_speed = 200.0
+        g.neovide_progress_bar_hide_delay = 0.2
 
         -- Neovide Fonts
         -- o.guifont = "MonoLisa Trial:Medium:h15"
         -- o.guifont = "CommitMono:Medium:h15"
         -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
         -- o.guifont = "FiraMono Nerd Font:Medium:h14"
-        o.guifont = "FiraCode Nerd Font:Medium:h14"
+        o.guifont = "FiraCode Nerd Font:Medium:h12"
         -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
         -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
         -- o.guifont = "Liga SFMono Nerd Font:b:h15"
