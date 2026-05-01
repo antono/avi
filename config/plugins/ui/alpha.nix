@@ -29,7 +29,7 @@
             " :   : :     :      :    "
           ];
         }
-        (padding 6)
+        (padding 4)
         {
           type = "button";
           val = "  Find File";
@@ -121,6 +121,56 @@
               }
             ];
             shortcut = "g";
+
+            position = "center";
+            cursor = 3;
+            width = 40;
+            align_shortcut = "right";
+            hl_shortcut = "Keyword";
+          };
+        }
+        (padding 1)
+        {
+          type = "button";
+          val = "󰜗  Nix Develop";
+          on_press.__raw = "function() require('nix-develop').nix_develop({'.', '--impure'}) end";
+          opts = {
+            keymap = [
+              "n"
+              "s"
+              ":NixDevleop <cr>"
+              {
+                noremap = true;
+                silent = true;
+                nowait = true;
+              }
+            ];
+            shortcut = "d";
+
+            position = "center";
+            cursor = 3;
+            width = 40;
+            align_shortcut = "right";
+            hl_shortcut = "Keyword";
+          };
+        }
+        (padding 1)
+        {
+          type = "button";
+          val = "󰼶   Devenv Shell";
+          on_press.__raw = "function() require('nix-develop').devenv_shell({'.', '--impure'}) end";
+          opts = {
+            keymap = [
+              "n"
+              "s"
+              ":DevenvShell<cr>"
+              {
+                noremap = true;
+                silent = true;
+                nowait = true;
+              }
+            ];
+            shortcut = "D";
 
             position = "center";
             cursor = 3;
