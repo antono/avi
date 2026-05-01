@@ -47,6 +47,19 @@ in
       require("quickfix-review").setup()
     '';
 
+    # Keymaps hint:
+    # <leader>ri - Add ISSUE review comment
+    # <leader>rs - Add SUGGESTION review comment
+    # <leader>rn - Add NOTE review comment
+    # <leader>rp - Add PRAISE review comment
+    # <leader>rd - Delete review comment at cursor
+    # <leader>rv - View review comment at cursor
+    # <leader>re - Export review to markdown
+    # <leader>rc - Clear all review comments
+    # <leader>rw - Save review to disk
+    # <leader>rl - Load review from disk
+    # <leader>rS - Show review comment summary
+    # <leader>rj - Jump to real file from diff
     keymaps = [
       {
         mode = "n";
@@ -140,7 +153,7 @@ in
       }
       {
         mode = "n";
-        key = "<leader>rg";
+        key = "<leader>rj";
         action = "<cmd>ReviewGoto<CR>";
         options.desc = "Jump to real file from diff";
       }

@@ -2,6 +2,14 @@
   globals.mapleader = " ";
 
   keymaps = [
+    # Code Review (review-quickfix.nvim)
+    {
+      mode = "n";
+      key = "<leader>r";
+      action = "<nop>";
+      options.desc = "Code Review";
+    }
+
     # Windows
     {
       mode = "n";
