@@ -10,6 +10,12 @@
       options.desc = "Code Review";
     }
 
+    {
+      mode = "n";
+      key = "q";
+      action = "<nop>";
+    }
+
     # Windows
     {
       mode = "n";

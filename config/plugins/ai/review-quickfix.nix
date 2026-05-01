@@ -16,12 +16,12 @@ in
     example = {
       enable = true;
     };
-    description = "" "
+    description = ''
       Enable quickfix-review.nvim - Turn review comments into quickfix entries.
       Features: integrate with review.nvim to show comments as quickfix list entries,
       jump between comments, and navigate review comments directly from the quickfix window.
       Requires: Neovim 0.12+ and review.nvim.
-    " "";
+    '';
   };
 
   config = lib.mkIf cfg.enable {
@@ -45,7 +45,23 @@ in
 
     extraConfigLua = ''
       require("quickfix-review").setup({
-        keymaps = {},
+        keymaps = {
+          add_comment_cycle = '<leader>ra',  -- Add comment with current cycle type
+          cycle_next = '+',                  -- Cycle to next type
+          cycle_previous = '-',              -- Cycle to previous type
+
+          delete_comment = '<leader>rd',
+          view = '<leader>rv',
+          export = '<leader>ry',
+          clear = '<leader>rc',
+          summary = '<leader>rS',
+          save = '<leader>rw',
+          load = '<leader>rl',
+          open_list = '<leader>ro',
+          next_comment = ']r',
+          prev_comment = '[r',
+          goto_real_file = '<leader>cg',
+        },
         -- Export filename (nil = clipboard only)
         export_file = nil,
         comment_types = {
@@ -61,6 +77,7 @@ in
           add_perf = '<leader>rp',
         },
       })
+      vim.opt.signcolumn = "yes:2"  -- Reserve 2 columns for signs
     '';
 
     keymaps = [
