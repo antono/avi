@@ -102,7 +102,6 @@ in
         g.neovide_cursor_vfx_particle_lifetime = 5.0
         g.neovide_cursor_vfx_particle_density = 14.0
         g.neovide_cursor_vfx_particle_speed = 12.0
-        g.neovide_opacity = 0.9
         g.neovide_scale_factor = 1.0
 
         g.neovide_progress_bar_enabled = true
@@ -115,10 +114,20 @@ in
         -- o.guifont = "CommitMono:Medium:h15"
         -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
         -- o.guifont = "FiraMono Nerd Font:Medium:h14"
-        o.guifont = "FiraCode Nerd Font:Medium:h11"
+        -- o.guifont = "FiraCode Nerd Font:Medium:h11"
         -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
         -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
         -- o.guifont = "Liga SFMono Nerd Font:b:h15"
+
+        local function change_scale(delta)
+          local new = vim.g.neovide_scale_factor + delta
+          if new < 0.5 then return end
+          vim.g.neovide_scale_factor = new
+        end
+
+        vim.keymap.set({"n", "v"}, "<C-=>", function() change_scale(0.1) end)
+        vim.keymap.set({"n", "v"}, "<C-->", function() change_scale(-0.1) end)
+        vim.keymap.set({"n", "v"}, "<C-0>", function() vim.g.neovide_scale_factor = 1.0 end)
       end
     '';
   };
