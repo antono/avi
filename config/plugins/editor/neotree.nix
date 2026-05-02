@@ -9,6 +9,7 @@
         "buffers"
         "git_status"
         "document_symbols"
+        "cerbo-neotree"
       ];
       popup_border_style = "rounded"; # “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
       filesystem = {

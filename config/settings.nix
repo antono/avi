@@ -89,6 +89,12 @@ in
 
       vim.opt.runtimepath:append(vim.fn.expand("~/Code/cerbo.nvim"))
 
+      -- some local stuff is possible
+      local home = os.getenv("HOME")
+      local unmanaged = home .. "/.local/share/nvim-plugins"
+      vim.opt.packpath:append(unmanaged)
+      vim.opt.runtimepath:append(unmanaged)
+
       -- Neovide
       if g.neovide then
         vim.print(vim.g.neovide_version)

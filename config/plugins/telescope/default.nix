@@ -30,6 +30,7 @@
         set_env.COLORTERM = "truecolor";
         file_ignore_patterns = [
           "^.git/"
+          "^.devenv/"
           "^.mypy_cache/"
           "^__pycache__/"
           "^output/"
@@ -104,13 +105,25 @@
           action = "registers";
           options.desc = "Select register to paste";
         };
-        "<leader>gc" = {
+        "<leader>gC" = {
           action = "git_commits";
-          options.desc = "commits";
+          options.desc = "Reporsitory Commits";
+        };
+        "<leader>gc" = {
+          action = "git_bcommits";
+          options.desc = "Buffer Commits";
         };
         "<leader>gw" = {
           action = "git_worktree";
-          options.desc = "git worktree";
+          options.desc = "Git Worktrees";
+        };
+        "<leader>gB" = {
+          action = "git_branches";
+          options.desc = "Git Branches";
+        };
+        "<leader>gs" = {
+          action = "git_stash";
+          options.desc = "Git Stash";
         };
         "<leader>fb" = {
           action = "buffers";

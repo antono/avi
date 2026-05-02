@@ -91,5 +91,6 @@
     ./util/db.nix
     ./util/mail.nix
     ./util/render-markdown.nix
+    ./util/tmux-navigator.nix
   ];
 }
