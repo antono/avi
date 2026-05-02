@@ -73,7 +73,7 @@
       keymaps = {
         "<leader>fZ" = {
           # FIXME: does not work
-          action = "zoxide";
+          action = "zoxide list";
           options.desc = "Zoxide folder list";
         };
         "<leader>ft" = {
