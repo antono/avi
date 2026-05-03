@@ -70,6 +70,7 @@
           __unkeyed-1 = "<leader>r";
           mode = "n";
           group = "Review";
+          icon = "";
         }
       ];
     };

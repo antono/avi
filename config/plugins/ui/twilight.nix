@@ -8,7 +8,7 @@
       ];
       key = "<leader>uT";
       action = "<cmd>Twilight<cr>";
-      options.desc = "Toggle diming of inactive code";
+      options.desc = "Twilight";
     }
   ];
 }

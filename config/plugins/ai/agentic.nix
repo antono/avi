@@ -26,6 +26,16 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    plugins = {
+      which-key.settings.spec = [
+        {
+          __unkeyed-1 = "<leader>a";
+          group = "Agentic";
+          icon = "󰯭";
+        }
+      ];
+    };
+
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         # NOTE: To update rev/hash: 1) Get new SHA from `gh api repos/antono/agentic.nvim/branches/telescope --jq '.commit.sha'`

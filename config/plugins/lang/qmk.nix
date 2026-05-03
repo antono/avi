@@ -1,0 +1,3 @@
+{
+  # plugins.qmk.enable = true;
+}

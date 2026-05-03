@@ -21,7 +21,7 @@
         __unkeyed-1 = "<leader>A";
         mode = "n";
         icon = "";
-        group = "+ai";
+        group = "Copilot";
       }
     ];
   };

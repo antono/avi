@@ -5,6 +5,7 @@
     ./ai/base.nix
     ./ai/codecompanion.nix
     ./ai/copilot.nix
+    ./ai/sidekick.nix
     ./ai/opencode.nix
     ./ai/review.nix
     ./ai/review-quickfix.nix
@@ -20,6 +21,7 @@
     ./editor/lz-n.nix
     ./editor/neotree.nix
     ./editor/undotree.nix
+    ./editor/virt-column.nix
     ./editor/visual-whitespace.nix
     ./editor/whichkey.nix
     ./editor/yanky.nix
@@ -58,6 +60,7 @@
     ./lang/typescript.nix
     ./lang/yaml.nix
     ./lang/helm.nix
+    ./lang/qmk.nix
 
     ./treesitter/treesitter.nix
     # ./treesitter/treesitter-textobjects.nix

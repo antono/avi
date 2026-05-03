@@ -29,21 +29,6 @@
 
     lsp.servers = {
       marksman.enable = true;
-
-      ltex = {
-        enable = false;
-        filetypes = [
-          "markdown"
-          "text"
-        ];
-
-        settings.completionEnabled = true;
-
-        extraOptions = {
-          checkFrequency = "save";
-          language = "en-GB";
-        };
-      };
     };
 
     lint = {
@@ -52,15 +37,15 @@
     };
   };
 
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>m";
-      action = "<cmd>MarkdownPreviewToggle<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle markdown preview";
-      };
-    }
-  ];
+  # keymaps = [
+  #   {
+  #     mode = "n";
+  #     key = "<leader>m";
+  #     action = "<cmd>MarkdownPreviewToggle<cr>";
+  #     options = {
+  #       silent = true;
+  #       desc = "Toggle markdown preview";
+  #     };
+  #   }
+  # ];
 }

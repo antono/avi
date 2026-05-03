@@ -6,8 +6,8 @@
 }:
 {
   plugins = {
-    vim-dadbod.enable = true;
-    vim-dadbod-ui.enable = true;
+    vim-dadbod.enable = false;
+    vim-dadbod-ui.enable = false;
   };
 
   keymaps = lib.mkIf config.plugins.vim-dadbod-ui.enable [

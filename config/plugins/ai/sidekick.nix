@@ -1,0 +1,5 @@
+{
+  plugins = {
+    sidekick.enable = true;
+  };
+}
