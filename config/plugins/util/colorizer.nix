@@ -1,15 +1,15 @@
 { pkgs, ... }:
 {
   extraPlugins = with pkgs.vimPlugins; [
-    windows-nvim
+    # windows-nvim
     nvzone-minty
   ];
   extraConfigLua = # lua
     ''
-      vim.o.winwidth = 10
-      vim.o.winminwidth = 10
-      vim.o.equalalways = false
-      require('windows').setup()
+      -- vim.o.winwidth = 10
+      -- vim.o.winminwidth = 10
+      -- vim.o.equalalways = false
+      -- require('windows').setup()
 
       require('minty').setup({
         huefy = {

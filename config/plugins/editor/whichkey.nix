@@ -65,6 +65,12 @@
           mode = "n";
           group = "Buffers";
         }
+
+        {
+          __unkeyed-1 = "<leader>r";
+          mode = "n";
+          group = "Review";
+        }
       ];
     };
   };

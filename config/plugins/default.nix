@@ -73,6 +73,7 @@
     # ./ui/nui.nix
     ./ui/precognition.nix
     ./ui/toggleterm.nix
+    ./ui/twilight.nix
     ./ui/ufo.nix
     ./ui/diagnostics.nix
 
