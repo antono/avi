@@ -1,20 +1,30 @@
+{ lib, ... }:
 {
   plugins.actions-preview = {
     enable = true;
     settings = {
+      # highlight_command = [
+      #   lib.nixvim.mkRaw
+      #   "require('actions-preview.highlight').delta 'delta --side-by-side'"
+      #   lib.nixvim.mkRaw
+      #   "require('actions-preview.highlight').diff_so_fancy()"
+      #   lib.nixvim.mkRaw
+      #   "require('actions-preview.highlight').diff_highlight()"
+      # ];
       telescope = {
-        sorting_strategy = "ascending";
-        layout_strategy = "vertical";
         layout_config = {
-          width = 0.8;
           height = 0.9;
-          prompt_position = "top";
           preview_cutoff = 20;
-          preview_height = ''
+          preview_height = lib.nixvim.mkRaw ''
             function(_, _, max_lines)
               return max_lines - 15
-            end'';
+            end
+          '';
+          prompt_position = "top";
+          width = 0.8;
         };
+        layout_strategy = "vertical";
+        sorting_strategy = "ascending";
       };
     };
   };
@@ -22,8 +32,7 @@
     {
       mode = "n";
       key = "<leader>ca";
-      # FIXME:
-      action = "<cmd>lua require('actions-preview').code_actions<cr>";
+      action = "<cmd>lua require('actions-preview').code_actions()<cr>";
       options.desc = "Code actions";
     }
   ];
