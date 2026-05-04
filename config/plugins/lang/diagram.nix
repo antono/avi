@@ -11,9 +11,15 @@
           __raw = "require('diagram.integrations.markdown')";
         }
       ];
+      events = {
+        render_buffer = [ ];
+        clear_buffer = [ "BufLeave" ];
+      };
       renderer_options = {
         mermaid = {
-          theme = "forest";
+          background = "transparent";
+          theme = "dark";
+          scale = 2;
         };
         plantuml = {
           charset = "utf-8";
