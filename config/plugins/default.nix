@@ -26,6 +26,7 @@
     ./editor/whichkey.nix
     ./editor/yanky.nix
     ./editor/yazi.nix
+    ./editor/dial.nix
 
     ./theme
     ./luasnip
