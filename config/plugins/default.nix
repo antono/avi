@@ -47,6 +47,7 @@
     ./lsp/lspsaga.nix
     ./lsp/trouble.nix
     ./lsp/aerial.nix
+    ./lsp/actions-preview.nix
 
     ./lang/rust.nix
     ./lang/cpp.nix
@@ -101,5 +102,6 @@
     ./util/tmux-navigator.nix
     ./util/wiki.nix
     ./util/helpview.nix
+    ./util/codesnap.nix
   ];
 }

@@ -12,6 +12,7 @@
         }
       ];
       events = {
+        # FIXME: Disable auto rendering
         render_buffer = [ ];
         clear_buffer = [ "BufLeave" ];
       };
