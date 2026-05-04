@@ -6,13 +6,13 @@
     {
       mode = "n";
       key = "<leader>cc";
-      action = ''<cmd>lua require('fastaction').code_action()<cr>'';
+      action = "<cmd>lua require('fastaction').code_action()<cr>";
       options.desc = "Fastaction code action";
     }
     {
       mode = "v";
       key = "<leader>cc";
-      action = ''<cmd>lua require('fastaction').code_action()<cr>'';
+      action = "<cmd>lua require('fastaction').code_action()<cr>";
       options.desc = "Fastaction code action";
     }
   ];

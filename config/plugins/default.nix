@@ -38,6 +38,7 @@
     ./git/gitblame.nix
     ./git/git-conflict.nix
     ./git/git-worktree.nix
+    ./git/gitportal.nix
 
     ./lsp/conform.nix
     ./lsp/fastaction.nix
@@ -96,5 +97,7 @@
     ./util/mail.nix
     ./util/render-markdown.nix
     ./util/tmux-navigator.nix
+    ./util/wiki.nix
+    ./util/helpview.nix
   ];
 }

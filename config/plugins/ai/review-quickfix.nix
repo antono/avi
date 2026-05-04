@@ -61,7 +61,12 @@ in
           next_comment = ']r',
           prev_comment = '[r',
           goto_real_file = '<leader>cg',
+          add_bug = '<leader>rb',
+          add_idea = '<leader>ri',
+          add_security = '<leader>rs',
+          add_perf = '<leader>rp',
         },
+
         -- Export filename (nil = clipboard only)
         export_file = nil,
         comment_types = {
@@ -69,12 +74,6 @@ in
           idea = { sign = '💡', highlight = 'DiagnosticInfo', description = 'Idea' },
           security = { sign = '🔒', highlight = 'DiagnosticError', description = 'Security concern' },
           perf = { sign = '⚡', highlight = 'DiagnosticWarn', description = 'Performance issue' },
-        },
-        keymaps = {
-          add_bug = '<leader>rb',
-          add_idea = '<leader>ri',
-          add_security = '<leader>rs',
-          add_perf = '<leader>rp',
         },
       })
       vim.opt.signcolumn = "yes:2"  -- Reserve 2 columns for signs

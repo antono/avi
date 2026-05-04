@@ -13,6 +13,7 @@
         fzf-native.enable = true;
         zoxide.enable = true;
         project.enable = false;
+        frecency.enable = true;
         ui-select = {
           enable = true;
           settings = {

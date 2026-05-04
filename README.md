@@ -38,7 +38,7 @@ environment.systemPackages or home.packages. If you're using home-manager.
 { inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
-    inputs.avi.packages.${system}.default
+    inputs.avi.packages.${system}.avi
   ];
 }
 ```

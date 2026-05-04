@@ -9,23 +9,21 @@
   extraPackages = lib.mkIf config.plugins.blink-cmp.enable (
     with pkgs;
     [
-      # blink-cmp-git
       gh
-      # blink-cmp-dictionary
       wordnet
     ]
   );
 
   extraPlugins = with pkgs.vimPlugins; [
-    blink-cmp-avante
-    # blink-cmp-conventional-commits
-    # blink-nerdfont-nvim
+    # blink-cmp-avante
+    blink-cmp-conventional-commits
+    blink-nerdfont-nvim
   ];
 
   plugins = lib.mkMerge [
     {
       blink-cmp = {
-        enable = false;
+        enable = true;
 
         settings = {
           completion = {
