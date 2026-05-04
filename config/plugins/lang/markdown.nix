@@ -10,10 +10,6 @@
   ];
 
   plugins = {
-    image = {
-      enable = false;
-    };
-
     markdown-preview = {
       enable = true;
       autoLoad = true;

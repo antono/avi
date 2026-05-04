@@ -56,6 +56,7 @@
     ./lang/json.nix
     ./lang/lua.nix
     ./lang/markdown.nix
+    ./lang/diagram.nix
     ./lang/nix.nix
     ./lang/python.nix
     ./lang/shell.nix
