@@ -30,11 +30,11 @@
           settings.telemetry.enable = false;
         };
 
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
+        # rust_analyzer = {
+        #   enable = true;
+        #   installCargo = true;
+        #   installRustc = true;
+        # };
 
         ts_ls.enable = true; # TS/JS
         cssls.enable = true;

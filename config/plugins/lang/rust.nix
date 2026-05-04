@@ -1,5 +1,8 @@
 {
-  # plugins.rustaceanvim = {
-  #   enable = true;
-  # };
+  plugins = {
+    rustaceanvim = {
+      enable = true;
+    };
+    crates.enable = true;
+  };
 }
