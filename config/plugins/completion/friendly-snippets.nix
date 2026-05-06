@@ -1,3 +1,5 @@
 {
-  plugins.friendly-snippets.enable = false;
+  plugins = {
+    friendly-snippets.enable = true;
+  };
 }

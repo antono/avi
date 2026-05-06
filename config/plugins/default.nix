@@ -12,7 +12,6 @@
     ./ai/windsurf.nix
 
     ./completion/blink.nix
-    ./completion/cmp.nix
     ./completion/friendly-snippets.nix
     ./completion/lspkind.nix
 
