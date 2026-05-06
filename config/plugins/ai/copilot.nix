@@ -46,28 +46,28 @@
       '';
       options.desc = "Quick Chat";
     }
-    {
-      mode = "n";
-      key = "<leader>Ah";
-      action.__raw = ''
-        function()
-          local actions = require("CopilotChat.actions")
-          require("CopilotChat.integrations.telescope").pick(actions.help_actions())
-        end
-      '';
-      options.desc = "Help Actions";
-    }
-    {
-      mode = "n";
-      key = "<leader>Ap";
-      action.__raw = ''
-        function()
-          local actions = require("CopilotChat.actions")
-          require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
-        end
-      '';
-      options.desc = "Prompt Actions";
-    }
+    # {
+    #   mode = "n";
+    #   key = "<leader>Ah";
+    #   action.__raw = ''
+    #     function()
+    #       local actions = require("CopilotChat.actions")
+    #       require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+    #     end
+    #   '';
+    #   options.desc = "Help Actions";
+    # }
+    # {
+    #   mode = "n";
+    #   key = "<leader>Ap";
+    #   action.__raw = ''
+    #     function()
+    #       local actions = require("CopilotChat.actions")
+    #       require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+    #     end
+    #   '';
+    #   options.desc = "Prompt Actions";
+    # }
     {
       mode = "n";
       key = "<leader>Aa";

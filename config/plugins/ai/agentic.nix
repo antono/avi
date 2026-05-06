@@ -89,7 +89,7 @@ in
 
       vim.api.nvim_create_user_command('AgenticSwitchProvider', function()
         require("agentic").switch_provider()
-      end, { desc = "Switch to next provider" })
+      end, { desc = "Switch provider" })
 
       vim.api.nvim_create_user_command('AgenticStopGeneration', function()
         require("agentic").stop_generation()
@@ -141,10 +141,13 @@ in
         options.desc = "Restore Agentic Session";
       }
       {
-        mode = "v";
-        key = "<leader>as";
+        mode = [
+          "v"
+          "n"
+        ];
+        key = "<leader>ac";
         action = "<cmd>AgenticAddSelection<CR>";
-        options.desc = "Add selection to Agentic context";
+        options.desc = "Add selection/file to Agentic context";
       }
       {
         mode = "n";
