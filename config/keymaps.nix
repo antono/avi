@@ -9,40 +9,17 @@
       action = "<nop>";
       options.desc = "Code Review";
     }
+    {
+      mode = "v";
+      key = "<leader>r";
+      action = "<nop>";
+      options.desc = "Code Review";
+    }
 
     {
       mode = "n";
       key = "q";
       action = "<nop>";
-    }
-
-    # Windows
-    {
-      mode = "n";
-      key = "<C-Up>";
-      action = "<C-w>k";
-      options.desc = "Move To Window Up";
-    }
-
-    {
-      mode = "n";
-      key = "<C-Down>";
-      action = "<C-w>j";
-      options.desc = "Move To Window Down";
-    }
-
-    {
-      mode = "n";
-      key = "<C-Left>";
-      action = "<C-w>h";
-      options.desc = "Move To Window Left";
-    }
-
-    {
-      mode = "n";
-      key = "<C-Right>";
-      action = "<C-w>l";
-      options.desc = "Move To Window Right";
     }
 
     {
@@ -267,11 +244,5 @@
     function ToggleWrap()
         vim.wo.wrap = not vim.wo.wrap
     end
-
-     if vim.lsp.inlay_hint then
-       vim.keymap.set('n', '<leader>uh', function()
-         vim.lsp.inlay_hint(0, nil)
-       end, { desc = 'Toggle Inlay Hints' })
-     end
   '';
 }

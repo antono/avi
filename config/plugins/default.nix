@@ -83,6 +83,7 @@
     ./ui/twilight.nix
     ./ui/ufo.nix
     ./ui/diagnostics.nix
+    ./ui/smart-splits.nix
 
     ./util/colorizer.nix
     ./util/compiler.nix

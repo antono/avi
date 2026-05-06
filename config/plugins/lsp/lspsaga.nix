@@ -7,7 +7,7 @@
         beacon.enable = true;
         ui.border = "rounded"; # One of none, single, double, rounded, solid, shadow
         hover = {
-          open_cmd = "!firfox";
+          open_cmd = "!xdg-open";
           open_link = "gx";
         };
         symbol_in_winbar = {
@@ -44,14 +44,14 @@
           sign = true;
         };
 
-        rename.keys = {
-          exec = "<CR>";
-          quit = [
-            "<C-k>"
-            "<Esc>"
-          ];
-          select = "x";
-        };
+        # rename.keys = {
+        #   exec = "<CR>";
+        #   quit = [
+        #     "<C-k>"
+        #     "<Esc>"
+        #   ];
+        #   select = "x";
+        # };
 
         scroll_preview = {
           scroll_up = "<C-d>";
