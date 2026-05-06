@@ -50,12 +50,12 @@ in
         # };
 
         pname = "agentic-nvim";
-        version = "6a35c8b";
+        version = "70b0d73";
         src = pkgs.fetchFromGitHub {
           owner = "carlos-algms";
           repo = "agentic.nvim";
-          rev = "6a35c8b";
-          sha256 = "sha256-CD6LpfE5jYzqw+3ZPxxJpCgOwWU3ecVjizgLHYiHozc=";
+          rev = "70b0d73";
+          sha256 = "sha256-VL8KQiXO+AlmD4Tepyi92MCafBQdCc7+T3RXTVd5ru4=";
         };
         doCheck = false;
       })
