@@ -25,7 +25,7 @@ in
 
       # Enable relative line numbers
       number = true;
-      relativenumber = true;
+      relativenumber = false;
 
       # Tab spacing 2 spaces
       tabstop = 2;
