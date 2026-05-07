@@ -1,9 +1,11 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 {
+  extraPackages = [ pkgs.wl-clipboard ];
   plugins.codesnap = {
     enable = true;
     settings = {
@@ -24,6 +26,27 @@
     local config_module = require("codesnap.config")
     local generator = require("generator")
 
+    local static = require("codesnap.static")
+    local flat = static.config
+    local sc = static.config.snapshot_config
+
+    if flat.watermark then
+      for k, v in pairs(flat.watermark) do
+        sc.watermark[k] = v
+      end
+    end
+    if flat.has_line_number ~= nil then
+      static.config.show_line_number = flat.has_line_number
+    end
+    if flat.mac_window_bar ~= nil then
+      sc.window.mac_window_bar = flat.mac_window_bar
+    end
+    if flat.has_breadcrumbs ~= nil then
+      sc.code_config.breadcrumbs.enable = flat.has_breadcrumbs
+    end
+    if flat.breadcrumbs_separator then
+      sc.code_config.breadcrumbs.separator = flat.breadcrumbs_separator
+    end
     local clip_cmd
     if vim.fn.executable("wl-copy") == 1 then
       clip_cmd = "wl-copy"
@@ -39,10 +62,12 @@
           vim.fn.system(clip_cmd == "wl-copy"
             and "wl-copy --type image/png < " .. vim.fn.shellescape(tmp)
             or "xclip -selection clipboard -t image/png < " .. vim.fn.shellescape(tmp))
+          vim.cmd("delmarks <>")
+          vim.notify("The snapshot is copied into clipboard successfully!")
+        else
+          vim.notify("Failed to save snapshot: " .. tostring(err), vim.log.levels.ERROR)
         end
         os.remove(tmp)
-        vim.cmd("delmarks <>")
-        vim.notify("The snapshot is copied into clipboard successfully!")
       end
 
       function codesnap.copy_ascii()
@@ -50,31 +75,30 @@
         local text = table.concat(lines, "\n")
         if text ~= "" then
           vim.fn.system({ clip_cmd }, text)
+          vim.cmd("delmarks <>")
+          vim.notify("The ASCII snapshot is copied into clipboard successfully!")
+        else
+          vim.notify("No code is selected", vim.log.levels.ERROR)
         end
-        vim.cmd("delmarks <>")
-        vim.notify("The ASCII snapshot is copied into clipboard successfully!")
       end
+
+      vim.api.nvim_create_user_command("CodeSnap", function()
+        codesnap.copy()
+      end, { range = true })
+      vim.api.nvim_create_user_command("CodeSnapASCII", function()
+        codesnap.copy_ascii()
+      end, { range = true })
     end
   '';
 
   keymaps = [
     {
       mode = [
-        "n"
         "v"
       ];
       key = "<leader>cs";
-      action = "<cmd>CodeSnap<cr>";
+      action = "<Esc><cmd>CodeSnap<cr>";
       options.desc = "Screenshot";
-    }
-    {
-      mode = [
-        "n"
-        "v"
-      ];
-      key = "<leader>cS";
-      action = "<cmd>CodeSnapASCII<cr>";
-      options.desc = "Asciishot";
     }
   ];
 }
