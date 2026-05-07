@@ -56,18 +56,21 @@
 
     if clip_cmd then
       function codesnap.copy()
-        local tmp = os.tmpname() .. ".png"
-        local ok, err = pcall(generator.save, tmp, config_module.get_config())
+        local save_dir = vim.fn.expand(static.config.save_path)
+        if vim.fn.isdirectory(save_dir) ~= 1 then
+          vim.fn.mkdir(save_dir, "p")
+        end
+        local filepath = save_dir .. "/CodeSnap_" .. os.date("%Y%m%d_%H%M%S") .. ".png"
+        local ok, err = pcall(generator.save, filepath, config_module.get_config())
         if ok then
           vim.fn.system(clip_cmd == "wl-copy"
-            and "wl-copy --type image/png < " .. vim.fn.shellescape(tmp)
-            or "xclip -selection clipboard -t image/png < " .. vim.fn.shellescape(tmp))
+            and "wl-copy --type image/png < " .. vim.fn.shellescape(filepath)
+            or "xclip -selection clipboard -t image/png < " .. vim.fn.shellescape(filepath))
           vim.cmd("delmarks <>")
-          vim.notify("The snapshot is copied into clipboard successfully!")
+          vim.notify("Saved to " .. filepath)
         else
           vim.notify("Failed to save snapshot: " .. tostring(err), vim.log.levels.ERROR)
         end
-        os.remove(tmp)
       end
 
       function codesnap.copy_ascii()
