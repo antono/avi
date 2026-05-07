@@ -3,7 +3,7 @@
   plugins.render-markdown = {
     enable = true;
     settings = {
-      fileTypes = [
+      file_types = [
         "markdown"
         "md"
         "AgenticChat"
