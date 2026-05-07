@@ -15,9 +15,6 @@
       mac_window_bar = false;
       save_path = "~/Pictures/Codesnap/";
       title = "CodeSnap";
-      watermark = {
-        content = "";
-      };
     };
   };
 
@@ -47,6 +44,9 @@
     if flat.breadcrumbs_separator then
       sc.code_config.breadcrumbs.separator = flat.breadcrumbs_separator
     end
+
+    sc.window.margin.x = 20
+    sc.window.margin.y = 20
     local clip_cmd
     if vim.fn.executable("wl-copy") == 1 then
       clip_cmd = "wl-copy"
