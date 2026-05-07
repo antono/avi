@@ -26,11 +26,24 @@
     blink-cmp-npm-nvim
     blink-cmp-yanky
     blink-nerdfont-nvim
+    blink-cmp
   ];
+
+  extraConfigLuaPre = lib.mkIf config.plugins.blink-cmp.enable (
+    lib.mkOrder 1 ''
+      -- codesnap.nvim puts libgenerator.so in package.cpath (no ? in the entry).
+      -- When require('blink_cmp_fuzzy') iterates cpath, it hits libgenerator.so first.
+      -- dlopen succeeds but luaopen_blink_cmp_fuzzy is not found (only luaopen_generator),
+      -- and LuaJIT stops searching. Prepend blink's path so it's found first.
+      package.cpath = "${pkgs.vimPlugins.blink-cmp}/target/release/lib?.so" .. ";" .. package.cpath
+    ''
+  );
 
   plugins = {
     blink-cmp = {
       enable = true;
+
+      package = pkgs.vimPlugins.blink-cmp;
 
       lazyLoad.settings.event = [
         "InsertEnter"
@@ -150,7 +163,7 @@
         };
 
         fuzzy = {
-          implementation = "lua";
+          implementation = "rust";
           sorts = [
             "exact"
             "score"
