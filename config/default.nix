@@ -23,5 +23,7 @@
     ruff
 
     typos-lsp
+
+    wl-clipboard
   ];
 }
