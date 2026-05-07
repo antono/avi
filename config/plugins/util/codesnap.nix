@@ -47,6 +47,18 @@
 
     sc.window.margin.x = 20
     sc.window.margin.y = 20
+
+    sc.background = {
+      start = { x = 0, y = 0 },
+      ["end"] = { x = "max", y = "max" },
+      stops = {
+        { position = 0, color = "#EBECB2" },
+        { position = 0.28, color = "#F3B0F7" },
+        { position = 0.73, color = "#92B5F0" },
+        { position = 0.94, color = "#AEF0F8" },
+      },
+    }
+
     local clip_cmd
     if vim.fn.executable("wl-copy") == 1 then
       clip_cmd = "wl-copy"
