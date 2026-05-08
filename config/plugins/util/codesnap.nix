@@ -13,7 +13,7 @@
       has_breadcrumbs = true;
       has_line_number = true;
       mac_window_bar = false;
-      save_path = "~/Pictures/Codesnap/";
+      save_path = "~/Pictures/Codesnap";
       title = "CodeSnap";
     };
   };
