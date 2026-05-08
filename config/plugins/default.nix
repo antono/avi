@@ -103,5 +103,6 @@
     ./util/wiki.nix
     ./util/helpview.nix
     ./util/codesnap.nix
+    ./util/bruno.nix
   ];
 }
