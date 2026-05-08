@@ -11,13 +11,8 @@
           statusline = [
             "dashboard"
             "alpha"
-            "AgenticChat"
-            "AgenticInput"
-            "AgenticCode"
-            "AgenticFiles"
-            "AgenticDiagnostics"
           ];
-          windbar = [
+          winbar = [
             "AgenticChat"
             "AgenticInput"
             "AgenticCode"
