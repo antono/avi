@@ -9,7 +9,7 @@
         "t"
       ];
       key = "<C-A-l>";
-      action = "<cmd>lua require('smart-splits').resize_right(5)<cr>";
+      action = "<cmd>lua require('smart-splits').resize_right(10)<cr>";
       options.desc = "Increase window width";
     }
 
@@ -19,7 +19,7 @@
         "t"
       ];
       key = "<C-A-h>";
-      action = "<cmd>lua require('smart-splits').resize_left(5)<cr>";
+      action = "<cmd>lua require('smart-splits').resize_left(10)<cr>";
       options.desc = "Decrease window width";
     }
 
@@ -29,7 +29,7 @@
         "t"
       ];
       key = "<C-A-j>";
-      action = "<cmd>lua require('smart-splits').resize_down(2)<cr>";
+      action = "<cmd>lua require('smart-splits').resize_down(10)<cr>";
       options.desc = "Decrease window height";
     }
 
@@ -39,8 +39,49 @@
         "t"
       ];
       key = "<C-A-k>";
-      action = "<cmd>lua require('smart-splits').resize_up(2)<cr>";
+      action = "<cmd>lua require('smart-splits').resize_up(10)<cr>";
       options.desc = "Increase window height";
+    }
+
+    # Windows - Resize small (with Shift, normal + terminal mode)
+    {
+      mode = [
+        "n"
+        "t"
+      ];
+      key = "<C-A-S-l>";
+      action = "<cmd>lua require('smart-splits').resize_right(5)<cr>";
+      options.desc = "Increase window width (small)";
+    }
+
+    {
+      mode = [
+        "n"
+        "t"
+      ];
+      key = "<C-A-S-h>";
+      action = "<cmd>lua require('smart-splits').resize_left(5)<cr>";
+      options.desc = "Decrease window width (small)";
+    }
+
+    {
+      mode = [
+        "n"
+        "t"
+      ];
+      key = "<C-A-S-j>";
+      action = "<cmd>lua require('smart-splits').resize_down(5)<cr>";
+      options.desc = "Decrease window height (small)";
+    }
+
+    {
+      mode = [
+        "n"
+        "t"
+      ];
+      key = "<C-A-S-k>";
+      action = "<cmd>lua require('smart-splits').resize_up(5)<cr>";
+      options.desc = "Increase window height (small)";
     }
   ];
 }
