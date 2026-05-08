@@ -4,6 +4,7 @@
     vim_enter = { };
     indentscope = { };
     toggleterm_mappings = { };
+    agentic_stop = { };
     # restore_cursor = { };
   };
 
@@ -51,6 +52,25 @@
             vim.keymap.set('t', '<C-g>', function()
               vim.cmd(vim.v.count1 .. "ToggleTerm")
             end, { buffer = 0 })
+          end
+        '';
+      };
+    }
+    {
+      group = "agentic_stop";
+      event = "FileType";
+      pattern = [
+        "AgenticChat"
+        "AgenticInput"
+        "AgenticCode"
+        "AgenticFiles"
+        "AgenticDiagnostics"
+        "AgenticTodos"
+      ];
+      callback = {
+        __raw = ''
+          function()
+            vim.keymap.set({ "n", "i" }, "<C-c>", "<cmd>AgenticStopGeneration<CR>", { buffer = true, desc = "Stop generation" })
           end
         '';
       };

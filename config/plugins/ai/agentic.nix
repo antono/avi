@@ -111,19 +111,11 @@ in
 
     keymaps = [
       {
-        mode = "n";
-        key = "<C-\\>";
-        action = "<cmd>AgenticToggle<CR>";
-        options.desc = "Toggle Agentic Chat";
-      }
-      {
-        mode = "i";
-        key = "<C-\\>";
-        action = "<cmd>AgenticToggle<CR>";
-        options.desc = "Toggle Agentic Chat";
-      }
-      {
-        mode = "v";
+        mode = [
+          "n"
+          "i"
+          "v"
+        ];
         key = "<C-\\>";
         action = "<cmd>AgenticToggle<CR>";
         options.desc = "Toggle Agentic Chat";
@@ -145,7 +137,7 @@ in
           "v"
           "n"
         ];
-        key = "<leader>ac";
+        key = "<leader>as";
         action = "<cmd>AgenticAddSelection<CR>";
         options.desc = "Add selection/file to Agentic context";
       }
@@ -169,7 +161,7 @@ in
       }
       {
         mode = "n";
-        key = "<leader>ax";
+        key = "<leader>aS";
         action = "<cmd>AgenticStopGeneration<CR>";
         options.desc = "Stop generation";
       }
