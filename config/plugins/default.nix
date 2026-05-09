@@ -39,6 +39,7 @@
     ./git/git-conflict.nix
     ./git/git-worktree.nix
     ./git/gitportal.nix
+    ./git/fugit2.nix
 
     ./lsp/conform.nix
     ./lsp/fastaction.nix

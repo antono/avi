@@ -22,7 +22,10 @@
       options.desc = "Open file via github/link";
     }
     {
-      mode = "n";
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>gy";
       action = "<cmd>GitPortal copy_link_to_clipboard<CR>";
       options.desc = "Open file via github/link";
