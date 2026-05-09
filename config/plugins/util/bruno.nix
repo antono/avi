@@ -68,13 +68,18 @@ in
 
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
+        # NOTE: To update rev/hash:
+        # 1) Get new rev SHA from github repo
+        # 2) Use ANY placeholder hash (e.g., "sha256-0000000000000000000000000000000000000000000")
+        # 3) Run `nix run .` to get the correct hash from the "got:" error message
+        # 4) Update sha256 with the "got:" hash from the error
         pname = "bruno-nvim";
-        version = "81f0dea";
+        version = "54bdebc";
         src = pkgs.fetchFromGitHub {
-          owner = "antono";
+          owner = "romek-codes";
           repo = "bruno.nvim";
-          rev = "81f0dea051de80f76a78c8aabb763e54edb2e1a0";
-          hash = "sha256-HGFHJBwJ7tOATlr1oTPDoHWMYFPMP9q1CUEZfnSzmzM=";
+          rev = "54bdebc62aa6ffc7906464a20d182c0a660be836";
+          hash = "sha256-YTNr0L7xuErETj+wDT7dFkjt+SPlFI3jr4ohfKuUPDU=";
         };
         doCheck = false;
       })
