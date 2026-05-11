@@ -20,7 +20,7 @@
         mermaid = {
           background = "transparent";
           theme = "dark";
-          scale = 2;
+          scale = 3;
         };
         plantuml = {
           charset = "utf-8";
