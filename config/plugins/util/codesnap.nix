@@ -4,8 +4,13 @@
   pkgs,
   ...
 }:
-{
-  extraPackages = [ pkgs.wl-clipboard ];
+let
+  isNotMac = !pkgs.stdenv.isDarwin;
+in
+lib.mkIf isNotMac {
+  extraPackages = with pkgs; [
+    wl-clipboard
+  ];
   plugins.codesnap = {
     enable = true;
     settings = {
