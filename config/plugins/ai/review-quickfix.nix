@@ -65,6 +65,7 @@ in
           add_idea = '<leader>ri',
           add_security = '<leader>rs',
           add_perf = '<leader>rp',
+          add_question = '<leader>rq',
         },
 
         -- Export filename (nil = clipboard only)
@@ -74,6 +75,7 @@ in
           idea = { sign = '💡', highlight = 'DiagnosticInfo', description = 'Idea' },
           security = { sign = '🔒', highlight = 'DiagnosticError', description = 'Security concern' },
           perf = { sign = '⚡', highlight = 'DiagnosticWarn', description = 'Performance issue' },
+          question = { sign = '❓', highlight = 'DiagnosticHint', description = 'Question' },
         },
       })
       vim.opt.signcolumn = "yes:2"  -- Reserve 2 columns for signs
@@ -109,6 +111,12 @@ in
         key = "<leader>rc";
         action = "<cmd>ReviewClear<CR>";
         options.desc = "Clear all review comments";
+      }
+      {
+        mode = "n";
+        key = "<leader>rq";
+        action = "<cmd>ReviewAddQuestion<CR>";
+        options.desc = "Add QUESTION review comment";
       }
       {
         mode = "n";
