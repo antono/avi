@@ -23,6 +23,18 @@
     #   };
     # }
     {
+      event = [ "FileType" ];
+      pattern = [ "markdown" ];
+      callback = {
+        __raw = ''
+          function()
+            vim.opt_local.wrap = false
+            vim.opt_local.conceallevel = 0
+          end
+        '';
+      };
+    }
+    {
       group = "indentscope";
       event = [ "FileType" ];
       pattern = [
