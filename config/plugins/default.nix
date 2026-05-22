@@ -64,7 +64,6 @@
     ./lang/typescript.nix
     ./lang/yaml.nix
     ./lang/helm.nix
-    ./lang/qmk.nix
 
     ./treesitter/treesitter.nix
     # ./treesitter/treesitter-textobjects.nix
