@@ -12,11 +12,11 @@ in
     type = lib.types.attrs;
     default = {
       enable = true;
-      provider = "claude-acp";
+      provider = "opencode-acp";
     };
     example = {
       enable = true;
-      provider = "claude-acp";
+      provider = "opencode-acp";
     };
     description = ''
       Enable agentic.nvim - Agentic Chat Interface for Neovim using ACP providers.
@@ -94,7 +94,7 @@ in
       end, { desc = "Rotate chat layout" })
 
       require("agentic").setup({
-        provider = "${cfg.provider or "claude-acp"}",
+        provider = "${cfg.provider or "opencode-acp"}",
         diff_preview = {
           enabled = true,
           layout = "split",
