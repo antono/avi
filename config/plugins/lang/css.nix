@@ -24,13 +24,14 @@
         ];
       };
 
-      tailwindcss = {
-        enable = true;
-        cmd = [
-          (lib.getExe pkgs.tailwindcss-language-server)
-          "--stdio"
-        ];
-      };
+      # PIECE OF CRAP ATM
+      # tailwindcss = {
+      #   enable = true;
+      #   cmd = [
+      #     (lib.getExe pkgs.tailwindcss-language-server)
+      #     "--stdio"
+      #   ];
+      # };
     };
   };
 }
