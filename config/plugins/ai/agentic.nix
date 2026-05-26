@@ -12,11 +12,11 @@ in
     type = lib.types.attrs;
     default = {
       enable = true;
-      provider = "opencode-acp";
+      provider = "claude-agent-acp";
     };
     example = {
       enable = true;
-      provider = "opencode-acp";
+      provider = "claude-agent-acp";
     };
     description = ''
       Enable agentic.nvim - Agentic Chat Interface for Neovim using ACP providers.
@@ -93,13 +93,31 @@ in
         require("agentic").rotate_layout()
       end, { desc = "Rotate chat layout" })
 
+      -- claude-agent-acp ships a glibc-linked `claude` binary in its
+      -- platform package (@anthropic-ai/claude-agent-sdk-linux-x64) that
+      -- NixOS's stub-ld refuses to run. Without an override the SDK
+      -- spawns it, the child dies, and the parent crashes with EPIPE the
+      -- moment it tries to write the first prompt. Point the SDK at the
+      -- nix-wrapped `claude` on PATH via CLAUDE_CODE_EXECUTABLE.
+      local claude_acp_env = {}
+      local claude_path = vim.fn.exepath("claude")
+      if claude_path ~= "" then
+        claude_acp_env.CLAUDE_CODE_EXECUTABLE = claude_path
+      end
+
       require("agentic").setup({
-        provider = "${cfg.provider or "opencode-acp"}",
+        provider = "${cfg.provider or "claude-agent-acp"}",
+        acp_providers = {
+          ["claude-agent-acp"] = {
+            env = claude_acp_env,
+          },
+        },
         diff_preview = {
           enabled = true,
           layout = "split",
           center_on_navigate_hunks = true,
         },
+        render_on_create = true,
       })
     '';
 
