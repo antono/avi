@@ -1,20 +1,11 @@
 {
   colorschemes = {
-    # onedark = {
-    #   enable = true;
-    # };
-    #   tokyonight = {
-    #     enable = true;
-    #   };
-    #   ayu = {
-    #     enable = true;
-    #   };
     catppuccin = {
       enable = true;
       settings = {
         background = {
-          light = "macchiato";
-          dark = "latte";
+          light = "latte";
+          dark = "frappe";
         };
         flavour = "frappe"; # “latte”, “mocha”, “frappe”, “macchiato”, “auto”
         transparent_background = true;
