@@ -36,7 +36,7 @@
         hsl_fn = true;
         css = true;
         css_fn = true;
-        tailwind = true;
+        # tailwind = true;
         mode = "virtualtext";
         virtualtext = "■";
         always_update = true;

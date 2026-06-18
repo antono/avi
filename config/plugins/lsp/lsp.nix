@@ -38,7 +38,7 @@
 
         ts_ls.enable = true; # TS/JS
         cssls.enable = true;
-        tailwindcss.enable = true;
+        # tailwindcss.enable = true;
         svelte.enable = true;
         pyright = {
           enable = true;
