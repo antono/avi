@@ -1,7 +1,7 @@
 {
   # Configuration for fugit2 (https://nix-community.github.io/nixvim/plugins/fugit2/settings.html)
   plugins.fugit2 = {
-    enable = true;
+    enable = false;
 
     # Options passed to require('fugit2').setup
     settings = {
@@ -10,7 +10,7 @@
 
       # Main popup dimensions (string percentages or integers)
       height = "90%"; # example from upstream docs
-      width = "62%";  # example from upstream docs
+      width = "62%"; # example from upstream docs
 
       # When showing the file blame popup
       blame_info_height = 10;
