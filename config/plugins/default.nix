@@ -97,7 +97,6 @@
     ./util/project-nvim.nix
     ./util/package-info.nix
     ./util/db.nix
-    ./util/mail.nix
     ./util/render-markdown.nix
     ./util/tmux-navigator.nix
     ./util/wiki.nix
