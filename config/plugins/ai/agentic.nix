@@ -44,12 +44,12 @@ in
         # 4) Update sha256 with the "got:" hash from the error
 
         pname = "agentic-nvim";
-        version = "a19fee6";
+        version = "a37f19f";
         src = pkgs.fetchFromGitHub {
           owner = "carlos-algms";
           repo = "agentic.nvim";
-          rev = "a19fee663aa8be5f46f0af6fc0b46427b0e75cf2";
-          sha256 = "sha256-ZT1ME4E8jwC6DPLVpEgCudL8go91q7PkfJn5ylajmYA=";
+          rev = "a37f19f1d7eda70267c73c65dd7c1c1d4f47c971";
+          sha256 = "sha256-rRw8NFUU2BrM1kk3Kdw8wJqb5sCtaVSPX60+0QEppx0=";
         };
         doCheck = false;
       })
