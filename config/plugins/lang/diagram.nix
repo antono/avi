@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   # A Neovim plugin for rendering diagrams, powered by image.nvim.
   # Formats: mermaid, plantuml, d2, gnuplot
@@ -29,8 +28,6 @@
     };
   };
 
-  extraPackages = with pkgs; [
-    mermaid-cli
-    plantuml
-  ];
+  # Renderers (mmdc, plantuml, d2, gnuplot) are not bundled: mermaid-cli pulls
+  # in chromium and plantuml a JDK (~1.8 GB). Install them where needed.
 }

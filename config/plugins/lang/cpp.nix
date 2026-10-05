@@ -1,5 +1,7 @@
 { pkgs, lib, ... }:
 {
+  # clangd/clang-format/clang-tidy/lldb-dap come from the project's devshell
+  # (direnv), so they match the project's LLVM version
   plugins = {
     conform-nvim.settings = {
       formatters_by_ft = {
@@ -8,7 +10,6 @@
       };
 
       formatters = {
-        clang-format.command = lib.getExe' pkgs.clang-tools "clang-format";
         cmake-format.command = lib.getExe pkgs.cmake-format;
       };
     };
@@ -20,7 +21,6 @@
       };
 
       linters = {
-        clangtidy.cmd = lib.getExe' pkgs.clang-tools "clang-tidy";
         cmakelint.cmd = lib.getExe' pkgs.cmake-format "cmake-lint";
       };
     };
@@ -29,6 +29,7 @@
       cmake.enable = true;
       clangd = {
         enable = true;
+        package = null;
         cmd = [
           "clangd"
           "--offset-encoding=utf-16"
@@ -88,7 +89,7 @@
     };
 
     dap = {
-      adapters.executables.lldb.command = "${pkgs.lldb}/bin/lldb-vscode";
+      adapters.executables.lldb.command = "lldb-dap";
 
       configurations.cpp = [
         {
