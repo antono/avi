@@ -12,7 +12,6 @@
         integrations = {
           cmp = true;
           flash = true;
-          fidget = true;
           gitsigns = true;
           indent_blankline.enabled = true;
           lsp_trouble = true;
