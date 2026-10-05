@@ -5,7 +5,7 @@
   ...
 }:
 let
-  isNotMac = !pkgs.stdenv.isDarwin;
+  isNotMac = !pkgs.stdenv.hostPlatform.isDarwin;
 in
 lib.mkIf isNotMac {
   extraPackages = with pkgs; [
