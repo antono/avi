@@ -26,7 +26,6 @@
     blink-cmp-npm-nvim
     blink-cmp-yanky
     blink-nerdfont-nvim
-    blink-cmp
   ];
 
   extraConfigLuaPre = lib.mkIf config.plugins.blink-cmp.enable (

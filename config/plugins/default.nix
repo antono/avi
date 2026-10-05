@@ -92,7 +92,6 @@
     ./util/mini.nix
     ./util/nvim-autopairs.nix
     ./util/nvim-surround.nix
-    ./util/plenary.nix
     ./util/persistence.nix
     ./util/project-nvim.nix
     ./util/package-info.nix
