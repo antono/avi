@@ -36,7 +36,7 @@
         #   installRustc = true;
         # };
 
-        ts_ls.enable = true; # TS/JS
+        # TS/JS is served by typescript-tools (lang/typescript.nix)
         cssls.enable = true;
         # tailwindcss.enable = true;
         svelte.enable = true;

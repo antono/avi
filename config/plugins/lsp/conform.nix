@@ -9,8 +9,8 @@
     enable = true;
     settings = {
       format_on_save = {
-        lspFallback = true;
-        timeoutMs = 500;
+        lsp_format = "fallback";
+        timeout_ms = 500;
       };
       formatters_by_ft = {
         # Use the "_" filetype to run formatters on filetypes that don't have other formatters configured.

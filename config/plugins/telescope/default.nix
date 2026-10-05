@@ -48,14 +48,14 @@
               end'';
             "<c-t>".__raw = ''
               function(...)
-                require('trouble.providers.telescope').open_with_trouble(...);
+                require('trouble.sources.telescope').open(...);
               end
             '';
           };
           n = {
             "<c-t>".__raw = ''
               function(...)
-                require('trouble.providers.telescope').open_with_trouble(...);
+                require('trouble.sources.telescope').open(...);
               end
             '';
           };

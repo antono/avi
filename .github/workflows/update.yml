@@ -11,26 +11,36 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
 
       - name: Install Nix
-        uses: cachix/install-nix-action@v20
+        uses: cachix/install-nix-action@v31
         with:
-          nix_path: nixpkgs=channel:nixos-unstable
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update flake.lock
         id: update
-        uses: DeterminateSystems/update-flake-lock@v20
+        uses: DeterminateSystems/update-flake-lock@v29
         with:
           pr-title: "Update flake.lock"
           pr-labels: | # Labels to be set on the PR
             dependencies
             automated
           token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
+
+      # Don't auto-merge an update that breaks the config
+      - name: Check flake
+        if: steps.update.outputs.pull-request-number != ''
+        run: |
+          git fetch origin update_flake_lock_action
+          git checkout FETCH_HEAD
+          nix flake check -L
+
       - uses: peter-evans/enable-pull-request-automerge@v3
+        if: steps.update.outputs.pull-request-number != ''
         with:
-          pull-request-number: ${{ github.event.pull_request.number }}
+          token: ${{ secrets.GH_TOKEN_FOR_UPDATES }}
+          pull-request-number: ${{ steps.update.outputs.pull-request-number }}
           merge-method: squash
