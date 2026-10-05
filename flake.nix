@@ -30,24 +30,6 @@
           pkgs = import inputs.nixpkgs {
             inherit system;
             config.allowUnfree = true;
-            overlays = [
-              (final: prev: {
-                vimPlugins = prev.vimPlugins.extend (
-                  _: vprev: {
-                    # Upstream re-tagged v3.0.4, so nixpkgs' hash no longer matches.
-                    # Pin the commit the tag now points to; drop once nixpkgs is fixed.
-                    copilot-lua = vprev.copilot-lua.overrideAttrs (_: {
-                      src = prev.fetchFromGitHub {
-                        owner = "zbirenbaum";
-                        repo = "copilot.lua";
-                        rev = "9d391a02dc0281713cbb7c3bc87cdd38287b92eb";
-                        hash = "sha256-kDQOm7/N6T7wOw1JlkcxNMnQrDE4oTRyGCZkvT8HZQw=";
-                      };
-                    });
-                  }
-                );
-              })
-            ];
           };
           nixvimModule = {
             inherit pkgs;

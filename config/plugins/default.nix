@@ -1,15 +1,8 @@
 {
   imports = [
     ./ai/agentic.nix
-    ./ai/avante.nix
     ./ai/base.nix
-    ./ai/codecompanion.nix
-    ./ai/copilot.nix
-    ./ai/sidekick.nix
-    ./ai/opencode.nix
-    ./ai/review.nix
     ./ai/review-quickfix.nix
-    ./ai/windsurf.nix
 
     ./completion/blink.nix
     ./completion/friendly-snippets.nix
