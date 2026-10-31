@@ -8,8 +8,6 @@
 
 ---
 
-</div>
-
 # 🔨 Installation
 
 If you'd like to give it a try before installing: `nix run github:antono/avi`
@@ -22,7 +20,7 @@ If you'd like to give it a try before installing: `nix run github:antono/avi`
 # flake
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     avi.url = "github:antono/avi";
   };
 }
@@ -45,8 +43,6 @@ environment.systemPackages or home.packages. If you're using home-manager.
 
 4: Rebuild your system.
 
-</details>
-
 # ⚙️ Configuration
 
 To start configuring, add or modify the nix files in `./config`. If you add a
@@ -59,6 +55,13 @@ To test your configuration simply run the following command
 
 ```
 nix run .
+```
+
+To validate that the flake itself is still well-formed (useful after editing
+`flake.nix` or inputs), run:
+
+```
+nix flake check
 ```
 
 # 📑 Resources
