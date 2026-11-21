@@ -28,16 +28,16 @@ in
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "quickfix-review-nvim";
-        version = "591492429572b3d81a9c4803cb10abfb6e69da46";
+        version = "bdb2b580379b9e6f99baed630922ed56ed6c4a60";
         src = pkgs.fetchFromGitHub {
           owner = "MMesch";
           repo = "quickfix-review-nvim";
-          rev = "591492429572b3d81a9c4803cb10abfb6e69da46";
+          rev = "bdb2b580379b9e6f99baed630922ed56ed6c4a60";
           # NOTE: To update rev/hash: 1) Get new SHA from `gh api repos/MMesch/quickfix-review-nvim/branches/main --jq '.commit.sha'`
           # 2) Use ANY placeholder hash (e.g., "sha256-0000000000000000000000000000000000000000000")
           # 3) Run `nix run .` to get the correct hash from the "got:" error message
           # 4) Update sha256 with the "got:" hash from the error
-          sha256 = "sha256-3/lVLGNxURIf6dadCjnETk4nFbnwWgY5venepaC273k=";
+          sha256 = "sha256-2CSsiHNzQA5uEpwg2eWILSppD6AQUyDhYOiG6Ip+HJI=";
         };
         doCheck = false;
       })
