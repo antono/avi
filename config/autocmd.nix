@@ -87,6 +87,19 @@
         '';
       };
     }
+    {
+      # Disable blink.cmp (menu + ghost text) in the agentic.nvim prompt input
+      group = "agentic_stop";
+      event = "FileType";
+      pattern = "AgenticInput";
+      callback = {
+        __raw = ''
+          function(args)
+            vim.b[args.buf].completion = false
+          end
+        '';
+      };
+    }
     ## from NVChad https://nvchad.com/docs/recipes (this autocmd will restore the cursor position when opening a file)
     # {
     #   group = "restore_cursor";
